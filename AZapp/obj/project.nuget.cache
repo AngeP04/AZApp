@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zGCHacnNbqFKosO563TbpTmAJS0ffnJ3BOtH/ZwFTFdVxinv6DD+mIg4cm1CTUmWIaHWs4H/Lkx2+D/yr/O+Bw==",
+  "dgSpecHash": "ntOw7I+nVcSNVJyyq6fRFmF2ghxUqI+mCigYQho99btYObqWjkYNFW7Oi/KbYYXLcZ+BOB+XqyujNsCogvwFSg==",
   "success": true,
-  "projectFilePath": "/home/asus/VisualStudioScripts/TPGS/AZApp/AZapp/AZapp.csproj",
+  "projectFilePath": "/home/asus/VisualStudioScripts/AZApp/AZapp/AZapp.csproj",
   "expectedPackageFiles": [
     "/home/asus/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/home/asus/.nuget/packages/questpdf/2025.5.0/questpdf.2025.5.0.nupkg.sha512"
