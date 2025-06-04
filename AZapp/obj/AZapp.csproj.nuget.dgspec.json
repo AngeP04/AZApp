@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/asus/VisualStudioScripts/AZapp/AZapp.csproj": {}
+    "/home/asus/VisualStudioScripts/TPGS/AZApp/AZapp/AZapp.csproj": {}
   },
   "projects": {
-    "/home/asus/VisualStudioScripts/AZapp/AZapp.csproj": {
+    "/home/asus/VisualStudioScripts/TPGS/AZApp/AZapp/AZapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/asus/VisualStudioScripts/AZapp/AZapp.csproj",
+        "projectUniqueName": "/home/asus/VisualStudioScripts/TPGS/AZApp/AZapp/AZapp.csproj",
         "projectName": "AZapp",
-        "projectPath": "/home/asus/VisualStudioScripts/AZapp/AZapp.csproj",
+        "projectPath": "/home/asus/VisualStudioScripts/TPGS/AZApp/AZapp/AZapp.csproj",
         "packagesPath": "/home/asus/.nuget/packages/",
-        "outputPath": "/home/asus/VisualStudioScripts/AZapp/obj/",
+        "outputPath": "/home/asus/VisualStudioScripts/TPGS/AZApp/AZapp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/asus/.nuget/NuGet/NuGet.Config"
