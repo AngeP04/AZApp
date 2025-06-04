@@ -1,0 +1,25 @@
+You can here update your wishlist.
+
+Please put here the .txt file your downloaded last time:
+<form asp-controller="member" asp-action="UploadFile" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <div class="custom-file-upload">
+            <input type="file" name="uploadedFile" id="fileInput" class="form-control-file" />
+            <label for="fileInput" id="fileLabel">Choose file</label>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+It is probably named WishListData.txt and is in a folder named Wishlist in your downloads folder if you did not move it last time.
+
+<script>
+    const fileInput = document.getElementById('fileInput');
+    const fileLabel = document.getElementById('fileLabel');
+
+    fileInput.addEventListener('change', function () {
+        const fileName = this.files[0]?.name || "Choose file";
+        fileLabel.textContent = fileName;
+    });
+</script>

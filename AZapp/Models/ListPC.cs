@@ -1,0 +1,355 @@
+public class ListPC
+{
+    public List<List<string>> KHJ = new List<List<string>>();
+    public List<List<string>> PSH = new List<List<string>>();
+    public List<List<string>> JYH = new List<List<string>>();
+    public List<List<string>> KYS = new List<List<string>>();
+    public List<List<string>> CSN = new List<List<string>>();
+    public List<List<string>> SMG = new List<List<string>>();
+    public List<List<string>> JWY = new List<List<string>>();
+    public List<List<string>> CJH = new List<List<string>>();
+
+    public ListPC()
+    {
+        KHJ.Add(["PirateKingKHJ", "SayMyNameKHJ", "IllusionVerKHJ", "WaveVerKHJ", "TreasureFinAVerKHJ", "TreasureFinZVerKHJ",
+        "1stAnnivAdultKHJ", "1stAnnivBabyKHJ", "Treasure1AVerKHJ", "Treasure1ZVerKHJ", "Inception1KHJ", "Inception2KHJ", "Thanxx1KHJ",
+        "Thanxx2KHJ", "ZeroFever1DiaryKHJ", "ZeroFever2A1KHJ", "ZeroFever2A2KHJ", "ZeroFever2ALimitedKHJ", "ZeroFever2Diary1KHJ",
+        "ZeroFever2Diary2KHJ", "ZeroFever2DiaryLimitedKHJ", "ZeroFever2Z1KHJ", "ZeroFever2Z2KHJ", "ZeroFever2ZLimitedKHJ", "SeasonSongs1KHJ",
+        "SeasonSongs2KHJ", "SeasonSongsUnitKHJ", "ZeroFever3A1KHJ", "ZeroFever3A2KHJ", "ZeroFever3ALimitedKHJ", "ZeroFever3Diary1KHJ", "ZeroFever3Diary2KHJ",
+        "ZeroFever3DiaryLimitedKHJ", "ZeroFever3Z1KHJ", "ZeroFever3Z2KHJ", "ZeroFever3ZLimitedKHJ", "ZeroFeverEpilogueA1KHJ", "ZeroFeverEpilogueA2KHJ",
+        "ZeroFeverEpilogueALimitedKHJ", "ZeroFeverEpilogueDiary1KHJ", "ZeroFeverEpilogueDiary2KHJ", "ZeroFeverEpilogueDiaryLimitedKHJ",
+        "ZeroFeverEpilogueZ1KHJ", "ZeroFeverEpilogueZ2KHJ", "ZeroFeverEpilogueZLimitedKHJ", "World1A1KHJ", "World1A2KHJ", "World1ALimitedKHJ",
+        "World1Diary1KHJ", "World1Diary2KHJ", "World1DiaryLimitedKHJ", "World1Z1KHJ", "World1Z2KHJ", "World1ZLimitedKHJ", "World1AIDKHJ",
+        "World1DiaryIDKHJ", "World1ZIDKHJ", "World1DigipackKHJ", "SpinOffA1KHJ", "SpinOffA2KHJ", "SpinOffAQRKHJ", "SpinOffAFaveKHJ", "SpinOffZ1KHJ", "SpinOffZ2KHJ",
+        "SpinOffZQRKHJ", "SpinOffZFaveKHJ", "SpinOffWitness1KHJ", "SpinOffWitness2KHJ", "SpinOffWitness3KHJ", "World2A1KHJ", "World2A2KHJ", "World2A3KHJ",
+        "World2Diary1KHJ", "World2Diary2Unit1KHJ", "World2Diary2Unit2KHJ", "World2Diary3Unit1KHJ", "World2Diary3Unit2KHJ", "World2Z1KHJ", "World2Z2KHJ",
+        "World2Z3KHJ", "World2AActionKHJ", "World2DiaryActionKHJ", "World2ZActionKHJ", "World2Digipack1KHJ", "World2Digipack2KHJ", "World2Mini1KHJ",
+        "World2Mini2KHJ", "World2Mini3KHJ", "World2Image1KHJ", "World2Image2KHJ", "World2Image3KHJ", "World2Image4KHJ", "World2Image5KHJ",
+        "World2Image6KHJ", "World2PC1V1KHJ", "World2PC1V2KHJ", "World2PC1V3KHJ", "World2PC1V4KHJ", "World2PC2V1KHJ", "World2PC2V2KHJ", "World2PC3V1KHJ",
+        "World2PC3V2KHJ", "WorldFinAVAKHJ", "WorldFinAVZKHJ", "WorldFinDiaryVAKHJ", "WorldFinDiaryVZKHJ", "WorldFinZVAKHJ", "WorldFinZVZKHJ",
+        "WorldFinDigipackKHJ", "WorldFinDigipackUSEUKHJ", "WorldFinStandingKHJ", "WorldFinMiniKHJ", "WorldFinPhotocardKHJ", "WorldFinImageKHJ",
+        "WorldFinPolaroid1KHJ", "WorldFinPolaroid2KHJ", "GoldenHour1AVAKHJ", "GoldenHour1AVZKHJ", "GoldenHour1DiaryAKHJ", "GoldenHour1DiaryZKHJ",
+        "GoldenHour1ZVAKHJ", "GoldenHour1ZVZKHJ", "GoldenHour1PocaQRKHJ", "GoldenHour1PocaImageKHJ", "GoldenHour1PocaPCAKHJ", "GoldenHour1PocaPCZKHJ",
+        "GoldenHour1PlatformMiniKHJ", "GoldenHour1PlatformImageKHJ", "GoldenHour1PlatformPCAKHJ", "GoldenHour1PlatformPCZKHJ", "GoldenHour1Digipack1KHJ",
+        "GoldenHour1Digipack2KHJ", "GoldenHour1Digipack3KHJ", "GoldenHour1Digipack4KHJ", "GoldenHour1Digipack5KHJ", "GoldenHour1Digipack6KHJ",
+        "GoldenHour1Digipack7KHJ", "GoldenHour1Digipack8KHJ", "GoldenHour2ToAKHJ", "GoldenHour2ToZKHJ", "GoldenHour2DiaryAKHJ", "GoldenHour2DiaryZKHJ",
+        "GoldenHour2ForAKHJ", "GoldenHour2ForZKHJ", "GoldenHour2PocaToQRKHJ", "GoldenHour2PocaToImageKHJ", "GoldenHour2PocaToAKHJ", "GoldenHour2PocaToZKHJ",
+        "GoldenHour2PocaDiaryQRKHJ", "GoldenHour2PocaDiaryImageKHJ", "GoldenHour2PocaDiaryAKHJ", "GoldenHour2PocaDiaryZKHJ", "GoldenHour2PocaForQRKHJ",
+        "GoldenHour2PocaForImageKHJ", "GoldenHour2PocaForAKHJ", "GoldenHour2PocaForZKHJ", "GoldenHour2Digipack1KHJ", "GoldenHour2Digipack2KHJ",
+        "GoldenHour2Digipack3KHJ", "GoldenHour2Digipack4KHJ", "GoldenHour2Digipack5KHJ", "GoldenHour2Digipack6KHJ"]);
+        KHJ.Add([""]);
+        KHJ.Add(["TreasureFinAKHJ", "TreasureFinZKHJ", "TreasureShiftAKHJ", "TreasureShiftZKHJ", "TreasureMapAKHJ", "TreasureMapZKHJ", "IntoAtoZRegularKHJ",
+        "IntoAtoZLimited1KHJ", "IntoAtoZLimited2KHJ", "DreamersAKHJ", "DreamersBKHJ", "DreamersAtinyKHJ", "BeyondZeroAKHJ", "BeyondZeroBKHJ", "BeyondZeroAtinyKHJ",
+        "ParadigmLimitedAKHJ", "ParadigmLimitedBKHJ", "ParadigmRegularAKHJ", "ParadigmRegularBKHJ", "ParadigmSoloAKHJ", "ParadigmSoloBKHJ", "ParadigmAtinyKHJ",
+        "LimitlessA1KHJ", "LimitlessA2KHJ", "LimitlessB1KHJ", "LimitlessB2KHJ", "LimitlessNormalUnit1KHJ", "LimitlessNormalUnit2KHJ", "LimitlessAtiny1KHJ",
+        "LimitlessAtiny2KHJ", "NotOkayA1KHJ", "NotOkayA2KHJ", "NotOkayB1KHJ", "NotOkayB2KHJ", "NotOkayCKHJ", "NotOkayDKHJ", "NotOkayE1KHJ", "NotOkayE2KHJ", "NotOkayAtiny1KHJ",
+        "NotOkayAtiny2KHJ", "NotOkayAtinyUnitKHJ","BirthdayASoloKHJ", "BirthdayBSoloKHJ", "BirthdayAtiny1KHJ", "BirthdayAtiny2KHJ", "BirthdayAtiny3KHJ", 
+        "BirthdayAtiny4KHJ", "BirthdayFlashPriceKHJ", "BirthdayRegularKHJ", "BirthdayALimited1KHJ", "BirthdayALimited2KHJ", "BirthdayBLimited1KHJ",
+        "BirthdayBLimited2KHJ"]);
+        KHJ.Add(["AllToActionTowerKHJ", "IntoAToZPopUp1KHJ", "IntoAToZPopUp2KHJ", "DreamersTowerKHJ", "DreamersShop1KHJ", "DreamersShop2KHJ",
+        "BeyondZeroTowerClearKHJ", "BeyondZeroTowerPrizeAKHJ", "BeyondZeroTowerPrizeDKHJ", "BeyondZeroHMVHoloKHJ", "ParadigmTowerOfflineAKHJ", "ParadigmTowerOfflineBKHJ",
+        "ParadigmTowerOnlineKHJ", "ParadigmTowerOfflineKHJ", "ParadigmTowerPolaroidKHJ", "ParadigmTowerLuckyDrawKHJ", "ParadigmHMVHoloKHJ", "LimitlessTowerClearKHJ",
+        "LimitlessTowerPopUpKHJ", "LimitlessTowerPolaroidKHJ", "LimitlessTowerBadgeKHJ", "LimitlessHMVHoloKHJ", "LimitlessHMVPolaroidKHJ", "LimitlessHMVCouponKHJ",
+        "NotOkayTowerKHJ", "NotOkayTowerLuckyDrawKHJ", "NotOkayTowerShibuyaLDKHJ", "NotOkayFJFanClubKHJ", "NotOkayJFanClubSoloKHJ", "NotOkayRakutenKHJ",
+        "NotOkayHMVKHJ", "NotOkayHMVLuckyDrawOnlineKHJ", "NotOkayHMVLuckyDrawExclusiveKHJ", "NotOkayHMVCouponKHJ", "NotOkayGUniversalKHJ", "NotOkayUniversalLuckyDrawKHJ",
+        "NotOkayUniversalVenue1KHJ", "NotOkayUniversalVenue2KHJ", "NotOkayTargetKHJ", "BirthdayJFanclubSoloKHJ", "BirthdayJFanclubKHJ", "BirthdayTowerKHJ",
+        "BirthdayTowerLuckyDrawKHJ", "BirthdayTowerShibuyaLDKHJ", "BirthdayUniversalKHJ", "BirthdayUniversalLuckyDrawKHJ", "BirthdayHMVOfflineLDKHJ",
+        "BirthdayRakutenLuckyDrawKHJ", "BirthdayNeowingKHJ", "BirthdayTowerVenue1KHJ", "BirthdayTowerVenue2KHJ", "BirthdayHMVClearKHJ", "BirthdayHMVOnlineLDKHJ"]);
+        KHJ.Add([""]);
+
+        PSH.Add(["PirateKingPSH", "SayMyNamePSH", "IllusionVerPSH", "WaveVerPSH", "TreasureFinAVerPSH", "TreasureFinZVerPSH",
+        "1stAnnivAdultPSH", "1stAnnivBabyPSH", "Treasure1AVerPSH", "Treasure1ZVerPSH", "Inception1PSH", "Inception2PSH", "Thanxx1PSH",
+        "Thanxx2PSH", "ZeroFever1DiaryPSH", "ZeroFever2A1PSH", "ZeroFever2A2PSH", "ZeroFever2ALimitedPSH", "ZeroFever2Diary1PSH",
+        "ZeroFever2Diary2PSH", "ZeroFever2DiaryLimitedPSH", "ZeroFever2Z1PSH", "ZeroFever2Z2PSH", "ZeroFever2ZLimitedPSH", "SeasonSongs1PSH",
+        "SeasonSongs2PSH", "SeasonSongsUnitPSH", "ZeroFever3A1PSH", "ZeroFever3A2PSH", "ZeroFever3ALimitedPSH", "ZeroFever3Diary1PSH", "ZeroFever3Diary2PSH",
+        "ZeroFever3DiaryLimitedPSH", "ZeroFever3Z1PSH", "ZeroFever3Z2PSH", "ZeroFever3ZLimitedPSH", "ZeroFeverEpilogueA1PSH", "ZeroFeverEpilogueA2PSH",
+        "ZeroFeverEpilogueALimitedPSH", "ZeroFeverEpilogueDiary1PSH", "ZeroFeverEpilogueDiary2PSH", "ZeroFeverEpilogueDiaryLimitedPSH",
+        "ZeroFeverEpilogueZ1PSH", "ZeroFeverEpilogueZ2PSH", "ZeroFeverEpilogueZLimitedPSH", "World1A1PSH", "World1A2PSH", "World1ALimitedPSH",
+        "World1Diary1PSH", "World1Diary2PSH", "World1DiaryLimitedPSH", "World1Z1PSH", "World1Z2PSH", "World1ZLimitedPSH", "World1AIDPSH",
+        "World1DiaryIDPSH", "World1ZIDPSH", "World1DigipackPSH", "SpinOffA1PSH", "SpinOffA2PSH", "SpinOffAQRPSH", "SpinOffAFavePSH", "SpinOffZ1PSH", "SpinOffZ2PSH",
+        "SpinOffZQRPSH", "SpinOffZFavePSH", "SpinOffWitness1PSH", "SpinOffWitness2PSH", "SpinOffWitness3PSH", "World2A1PSH", "World2A2PSH", "World2A3PSH",
+        "World2Diary1PSH", "World2Diary2Unit1PSH", "World2Diary2Unit2PSH", "World2Diary3Unit1PSH", "World2Diary3Unit2PSH", "World2Z1PSH", "World2Z2PSH",
+        "World2Z3PSH", "World2AActionPSH", "World2DiaryActionPSH", "World2ZActionPSH", "World2Digipack1PSH", "World2Digipack2PSH", "World2Mini1PSH",
+        "World2Mini2PSH", "World2Mini3PSH", "World2Image1PSH", "World2Image2PSH", "World2Image3PSH", "World2Image4PSH", "World2Image5PSH",
+        "World2Image6PSH", "World2PC1V1PSH", "World2PC1V2PSH", "World2PC1V3PSH", "World2PC1V4PSH", "World2PC2V1PSH", "World2PC2V2PSH", "World2PC3V1PSH",
+        "World2PC3V2PSH", "WorldFinAVAPSH", "WorldFinAVZPSH", "WorldFinDiaryVAPSH", "WorldFinDiaryVZPSH", "WorldFinZVAPSH", "WorldFinZVZPSH",
+        "WorldFinDigipackPSH", "WorldFinDigipackUSEUPSH", "WorldFinStandingPSH", "WorldFinMiniPSH", "WorldFinPhotocardPSH", "WorldFinImagePSH",
+        "WorldFinPolaroid1PSH", "WorldFinPolaroid2PSH", "GoldenHour1AVAPSH", "GoldenHour1AVZPSH", "GoldenHour1DiaryAPSH", "GoldenHour1DiaryZPSH",
+        "GoldenHour1ZVAPSH", "GoldenHour1ZVZPSH", "GoldenHour1PocaQRPSH", "GoldenHour1PocaImagePSH", "GoldenHour1PocaPCAPSH", "GoldenHour1PocaPCZPSH",
+        "GoldenHour1PlatformMiniPSH", "GoldenHour1PlatformImagePSH", "GoldenHour1PlatformPCAPSH", "GoldenHour1PlatformPCZPSH", "GoldenHour1Digipack1PSH",
+        "GoldenHour1Digipack2PSH", "GoldenHour1Digipack3PSH", "GoldenHour1Digipack4PSH", "GoldenHour1Digipack5PSH", "GoldenHour1Digipack6PSH",
+        "GoldenHour1Digipack7PSH", "GoldenHour1Digipack8PSH", "GoldenHour2ToAPSH", "GoldenHour2ToZPSH", "GoldenHour2DiaryAPSH", "GoldenHour2DiaryZPSH",
+        "GoldenHour2ForAPSH", "GoldenHour2ForZPSH", "GoldenHour2PocaToQRPSH", "GoldenHour2PocaToImagePSH", "GoldenHour2PocaToAPSH", "GoldenHour2PocaToZPSH",
+        "GoldenHour2PocaDiaryQRPSH", "GoldenHour2PocaDiaryImagePSH", "GoldenHour2PocaDiaryAPSH", "GoldenHour2PocaDiaryZPSH", "GoldenHour2PocaForQRPSH",
+        "GoldenHour2PocaForImagePSH", "GoldenHour2PocaForAPSH", "GoldenHour2PocaForZPSH", "GoldenHour2Digipack1PSH", "GoldenHour2Digipack2PSH",
+        "GoldenHour2Digipack3PSH", "GoldenHour2Digipack4PSH", "GoldenHour2Digipack5PSH", "GoldenHour2Digipack6PSH"]);
+        PSH.Add([""]);
+        PSH.Add(["TreasureFinAPSH", "TreasureFinZPSH", "TreasureShiftAPSH", "TreasureShiftZPSH", "TreasureMapAPSH", "TreasureMapZPSH", "IntoAtoZRegularPSH",
+        "IntoAtoZLimited1PSH", "IntoAtoZLimited2PSH", "DreamersAPSH", "DreamersBPSH", "DreamersAtinyPSH", "BeyondZeroAPSH", "BeyondZeroBPSH", "BeyondZeroAtinyPSH",
+        "ParadigmLimitedAPSH", "ParadigmLimitedBPSH", "ParadigmRegularAPSH", "ParadigmRegularBPSH", "ParadigmSoloAPSH", "ParadigmSoloBPSH", "ParadigmAtinyPSH",
+        "LimitlessA1PSH", "LimitlessA2PSH", "LimitlessB1PSH", "LimitlessB2PSH", "LimitlessNormalUnit1PSH", "LimitlessNormalUnit2PSH", "LimitlessAtiny1PSH",
+        "LimitlessAtiny2PSH", "NotOkayA1PSH", "NotOkayA2PSH", "NotOkayB1PSH", "NotOkayB2PSH", "NotOkayCPSH", "NotOkayDPSH", "NotOkayE1PSH", "NotOkayE2PSH", "NotOkayAtiny1PSH",
+        "NotOkayAtiny2PSH", "NotOkayAtinyUnitPSH","BirthdayASoloPSH", "BirthdayBSoloPSH", "BirthdayAtiny1PSH", "BirthdayAtiny2PSH", "BirthdayAtiny3PSH", 
+        "BirthdayAtiny4PSH", "BirthdayFlashPricePSH", "BirthdayRegularPSH", "BirthdayALimited1PSH", "BirthdayALimited2PSH", "BirthdayBLimited1PSH",
+        "BirthdayBLimited2PSH"]);
+        PSH.Add(["AllToActionTowerPSH", "IntoAToZPopUp1PSH", "IntoAToZPopUp2PSH", "DreamersTowerPSH", "DreamersShop1PSH", "DreamersShop2PSH",
+        "BeyondZeroTowerClearPSH", "BeyondZeroTowerPrizeAPSH", "BeyondZeroTowerPrizeDPSH", "BeyondZeroHMVHoloPSH", "ParadigmTowerOfflineAPSH", "ParadigmTowerOfflineBPSH",
+        "ParadigmTowerOnlinePSH", "ParadigmTowerOfflinePSH", "ParadigmTowerPolaroidPSH", "ParadigmTowerLuckyDrawPSH", "ParadigmHMVHoloPSH", "LimitlessTowerClearPSH",
+        "LimitlessTowerPopUpPSH", "LimitlessTowerPolaroidPSH", "LimitlessTowerBadgePSH", "LimitlessHMVHoloPSH", "LimitlessHMVPolaroidPSH", "LimitlessHMVCouponPSH",
+        "NotOkayTowerPSH", "NotOkayTowerLuckyDrawPSH", "NotOkayTowerShibuyaLDPSH", "NotOkayFJFanClubPSH", "NotOkayJFanClubSoloPSH", "NotOkayRakutenPSH",
+        "NotOkayHMVPSH", "NotOkayHMVLuckyDrawOnlinePSH", "NotOkayHMVLuckyDrawExclusivePSH", "NotOkayHMVCouponPSH", "NotOkayGUniversalPSH", "NotOkayUniversalLuckyDrawPSH",
+        "NotOkayUniversalVenue1PSH", "NotOkayUniversalVenue2PSH", "NotOkayTargetPSH", "BirthdayJFanclubSoloPSH", "BirthdayJFanclubPSH", "BirthdayTowerPSH",
+        "BirthdayTowerLuckyDrawPSH", "BirthdayTowerShibuyaLDPSH", "BirthdayUniversalPSH", "BirthdayUniversalLuckyDrawPSH", "BirthdayHMVOfflineLDPSH",
+        "BirthdayRakutenLuckyDrawPSH", "BirthdayNeowingPSH", "BirthdayTowerVenue1PSH", "BirthdayTowerVenue2PSH", "BirthdayHMVClearPSH", "BirthdayHMVOnlineLDPSH"]);
+        PSH.Add([""]);
+
+        JYH.Add(["PirateKingJYH", "SayMyNameJYH", "IllusionVerJYH", "WaveVerJYH", "TreasureFinAVerJYH", "TreasureFinZVerJYH",
+        "1stAnnivAdultJYH", "1stAnnivBabyJYH", "Treasure1AVerJYH", "Treasure1ZVerJYH", "Inception1JYH", "Inception2JYH", "Thanxx1JYH",
+        "Thanxx2JYH", "ZeroFever1DiaryJYH", "ZeroFever2A1JYH", "ZeroFever2A2JYH", "ZeroFever2ALimitedJYH", "ZeroFever2Diary1JYH",
+        "ZeroFever2Diary2JYH", "ZeroFever2DiaryLimitedJYH", "ZeroFever2Z1JYH", "ZeroFever2Z2JYH", "ZeroFever2ZLimitedJYH", "SeasonSongs1JYH",
+        "SeasonSongs2JYH", "SeasonSongsUnitJYH", "ZeroFever3A1JYH", "ZeroFever3A2JYH", "ZeroFever3ALimitedJYH", "ZeroFever3Diary1JYH", "ZeroFever3Diary2JYH",
+        "ZeroFever3DiaryLimitedJYH", "ZeroFever3Z1JYH", "ZeroFever3Z2JYH", "ZeroFever3ZLimitedJYH", "ZeroFeverEpilogueA1JYH", "ZeroFeverEpilogueA2JYH",
+        "ZeroFeverEpilogueALimitedJYH", "ZeroFeverEpilogueDiary1JYH", "ZeroFeverEpilogueDiary2JYH", "ZeroFeverEpilogueDiaryLimitedJYH",
+        "ZeroFeverEpilogueZ1JYH", "ZeroFeverEpilogueZ2JYH", "ZeroFeverEpilogueZLimitedJYH", "World1A1JYH", "World1A2JYH", "World1ALimitedJYH",
+        "World1Diary1JYH", "World1Diary2JYH", "World1DiaryLimitedJYH", "World1Z1JYH", "World1Z2JYH", "World1ZLimitedJYH", "World1AIDJYH",
+        "World1DiaryIDJYH", "World1ZIDJYH", "World1DigipackJYH", "SpinOffA1JYH", "SpinOffA2JYH", "SpinOffAQRJYH", "SpinOffAFaveJYH", "SpinOffZ1JYH", "SpinOffZ2JYH",
+        "SpinOffZQRJYH", "SpinOffZFaveJYH", "SpinOffWitness1JYH", "SpinOffWitness2JYH", "SpinOffWitness3JYH", "World2A1JYH", "World2A2JYH", "World2A3JYH",
+        "World2Diary1JYH", "World2Diary2Unit1JYH", "World2Diary2Unit2JYH", "World2Diary3Unit1JYH", "World2Diary3Unit2JYH", "World2Z1JYH", "World2Z2JYH",
+        "World2Z3JYH", "World2AActionJYH", "World2DiaryActionJYH", "World2ZActionJYH", "World2Digipack1JYH", "World2Digipack2JYH", "World2Mini1JYH",
+        "World2Mini2JYH", "World2Mini3JYH", "World2Image1JYH", "World2Image2JYH", "World2Image3JYH", "World2Image4JYH", "World2Image5JYH",
+        "World2Image6JYH", "World2PC1V1JYH", "World2PC1V2JYH", "World2PC1V3JYH", "World2PC1V4JYH", "World2PC2V1JYH", "World2PC2V2JYH", "World2PC3V1JYH",
+        "World2PC3V2JYH", "WorldFinAVAJYH", "WorldFinAVZJYH", "WorldFinDiaryVAJYH", "WorldFinDiaryVZJYH", "WorldFinZVAJYH", "WorldFinZVZJYH",
+        "WorldFinDigipackJYH", "WorldFinDigipackUSEUJYH", "WorldFinStandingJYH", "WorldFinMiniJYH", "WorldFinPhotocardJYH", "WorldFinImageJYH",
+        "WorldFinPolaroid1JYH", "WorldFinPolaroid2JYH", "GoldenHour1AVAJYH", "GoldenHour1AVZJYH", "GoldenHour1DiaryAJYH", "GoldenHour1DiaryZJYH",
+        "GoldenHour1ZVAJYH", "GoldenHour1ZVZJYH", "GoldenHour1PocaQRJYH", "GoldenHour1PocaImageJYH", "GoldenHour1PocaPCAJYH", "GoldenHour1PocaPCZJYH",
+        "GoldenHour1PlatformMiniJYH", "GoldenHour1PlatformImageJYH", "GoldenHour1PlatformPCAJYH", "GoldenHour1PlatformPCZJYH", "GoldenHour1Digipack1JYH",
+        "GoldenHour1Digipack2JYH", "GoldenHour1Digipack3JYH", "GoldenHour1Digipack4JYH", "GoldenHour1Digipack5JYH", "GoldenHour1Digipack6JYH",
+        "GoldenHour1Digipack7JYH", "GoldenHour1Digipack8JYH", "GoldenHour2ToAJYH", "GoldenHour2ToZJYH", "GoldenHour2DiaryAJYH", "GoldenHour2DiaryZJYH",
+        "GoldenHour2ForAJYH", "GoldenHour2ForZJYH", "GoldenHour2PocaToQRJYH", "GoldenHour2PocaToImageJYH", "GoldenHour2PocaToAJYH", "GoldenHour2PocaToZJYH",
+        "GoldenHour2PocaDiaryQRJYH", "GoldenHour2PocaDiaryImageJYH", "GoldenHour2PocaDiaryAJYH", "GoldenHour2PocaDiaryZJYH", "GoldenHour2PocaForQRJYH",
+        "GoldenHour2PocaForImageJYH", "GoldenHour2PocaForAJYH", "GoldenHour2PocaForZJYH", "GoldenHour2Digipack1JYH", "GoldenHour2Digipack2JYH",
+        "GoldenHour2Digipack3JYH", "GoldenHour2Digipack4JYH", "GoldenHour2Digipack5JYH", "GoldenHour2Digipack6JYH"]);
+        JYH.Add([""]);
+        JYH.Add(["TreasureFinAJYH", "TreasureFinZJYH", "TreasureShiftAJYH", "TreasureShiftZJYH", "TreasureMapAJYH", "TreasureMapZJYH", "IntoAtoZRegularJYH",
+        "IntoAtoZLimited1JYH", "IntoAtoZLimited2JYH", "DreamersAJYH", "DreamersBJYH", "DreamersAtinyJYH", "BeyondZeroAJYH", "BeyondZeroBJYH", "BeyondZeroAtinyJYH",
+        "ParadigmLimitedAJYH", "ParadigmLimitedBJYH", "ParadigmRegularAJYH", "ParadigmRegularBJYH", "ParadigmSoloAJYH", "ParadigmSoloBJYH", "ParadigmAtinyJYH",
+        "LimitlessA1JYH", "LimitlessA2JYH", "LimitlessB1JYH", "LimitlessB2JYH", "LimitlessNormalUnit1JYH", "LimitlessNormalUnit2JYH", "LimitlessAtiny1JYH",
+        "LimitlessAtiny2JYH", "NotOkayA1JYH", "NotOkayA2JYH", "NotOkayB1JYH", "NotOkayB2JYH", "NotOkayCJYH", "NotOkayDJYH", "NotOkayE1JYH", "NotOkayE2JYH",
+        "NotOkayAtiny1JYH", "NotOkayAtiny2JYH", "NotOkayAtinyUnitJYH","BirthdayASoloJYH", "BirthdayBSoloJYH", "BirthdayAtiny1JYH", "BirthdayAtiny2JYH",
+        "BirthdayAtiny3JYH", "BirthdayAtiny4JYH", "BirthdayFlashPriceJYH", "BirthdayRegularJYH", "BirthdayALimited1JYH", "BirthdayALimited2JYH", "BirthdayBLimited1JYH",
+        "BirthdayBLimited2JYH"]);
+        JYH.Add(["AllToActionTowerJYH", "IntoAToZPopUp1JYH", "IntoAToZPopUp2JYH", "DreamersTowerJYH", "DreamersShop1JYH", "DreamersShop2JYH",
+        "BeyondZeroTowerClearJYH", "BeyondZeroTowerPrizeAJYH", "BeyondZeroTowerPrizeDJYH", "BeyondZeroHMVHoloJYH", "ParadigmTowerOfflineAJYH", "ParadigmTowerOfflineBJYH",
+        "ParadigmTowerOnlineJYH", "ParadigmTowerOfflineJYH", "ParadigmTowerPolaroidJYH", "ParadigmTowerLuckyDrawJYH", "ParadigmHMVHoloJYH", "LimitlessTowerClearJYH",
+        "LimitlessTowerPopUpJYH", "LimitlessTowerPolaroidJYH", "LimitlessTowerBadgeJYH", "LimitlessHMVHoloJYH", "LimitlessHMVPolaroidJYH", "LimitlessHMVCouponJYH",
+        "NotOkayTowerJYH", "NotOkayTowerLuckyDrawJYH", "NotOkayTowerShibuyaLDJYH", "NotOkayFJFanClubJYH", "NotOkayJFanClubSoloJYH", "NotOkayRakutenJYH",
+        "NotOkayHMVJYH", "NotOkayHMVLuckyDrawOnlineJYH", "NotOkayHMVLuckyDrawExclusiveJYH", "NotOkayHMVCouponJYH", "NotOkayGUniversalJYH", "NotOkayUniversalLuckyDrawJYH",
+        "NotOkayUniversalVenue1JYH", "NotOkayUniversalVenue2JYH", "NotOkayTargetJYH", "BirthdayJFanclubSoloJYH", "BirthdayJFanclubJYH", "BirthdayTowerJYH",
+        "BirthdayTowerLuckyDrawJYH", "BirthdayTowerShibuyaLDJYH", "BirthdayUniversalJYH", "BirthdayUniversalLuckyDrawJYH", "BirthdayHMVOfflineLDJYH",
+        "BirthdayRakutenLuckyDrawJYH", "BirthdayNeowingJYH", "BirthdayTowerVenue1JYH", "BirthdayTowerVenue2JYH", "BirthdayHMVClearJYH", "BirthdayHMVOnlineLDJYH"]);
+        JYH.Add([""]);
+
+        KYS.Add(["PirateKingKYS", "SayMyNameKYS", "IllusionVerKYS", "WaveVerKYS", "TreasureFinAVerKYS", "TreasureFinZVerKYS",
+        "1stAnnivAdultKYS", "1stAnnivBabyKYS", "Treasure1AVerKYS", "Treasure1ZVerKYS", "Inception1KYS", "Inception2KYS", "Thanxx1KYS",
+        "Thanxx2KYS", "ZeroFever1DiaryKYS", "ZeroFever2A1KYS", "ZeroFever2A2KYS", "ZeroFever2ALimitedKYS", "ZeroFever2Diary1KYS",
+        "ZeroFever2Diary2KYS", "ZeroFever2DiaryLimitedKYS", "ZeroFever2Z1KYS", "ZeroFever2Z2KYS", "ZeroFever2ZLimitedKYS", "SeasonSongs1KYS",
+        "SeasonSongs2KYS", "SeasonSongsUnitKYS", "ZeroFever3A1KYS", "ZeroFever3A2KYS", "ZeroFever3ALimitedKYS", "ZeroFever3Diary1KYS", "ZeroFever3Diary2KYS",
+        "ZeroFever3DiaryLimitedKYS", "ZeroFever3Z1KYS", "ZeroFever3Z2KYS", "ZeroFever3ZLimitedKYS", "ZeroFeverEpilogueA1KYS", "ZeroFeverEpilogueA2KYS",
+        "ZeroFeverEpilogueALimitedKYS", "ZeroFeverEpilogueDiary1KYS", "ZeroFeverEpilogueDiary2KYS", "ZeroFeverEpilogueDiaryLimitedKYS",
+        "ZeroFeverEpilogueZ1KYS", "ZeroFeverEpilogueZ2KYS", "ZeroFeverEpilogueZLimitedKYS", "World1A1KYS", "World1A2KYS", "World1ALimitedKYS",
+        "World1Diary1KYS", "World1Diary2KYS", "World1DiaryLimitedKYS", "World1Z1KYS", "World1Z2KYS", "World1ZLimitedKYS", "World1AIDKYS",
+        "World1DiaryIDKYS", "World1ZIDKYS", "World1DigipackKYS", "SpinOffA1KYS", "SpinOffA2KYS", "SpinOffAQRKYS", "SpinOffAFaveKYS", "SpinOffZ1KYS", "SpinOffZ2KYS",
+        "SpinOffZQRKYS", "SpinOffZFaveKYS", "SpinOffWitness1KYS", "SpinOffWitness2KYS", "SpinOffWitness3KYS", "World2A1KYS", "World2A2KYS", "World2A3KYS",
+        "World2Diary1KYS", "World2Diary2Unit1KYS", "World2Diary2Unit2KYS", "World2Diary3Unit1KYS", "World2Diary3Unit2KYS", "World2Z1KYS", "World2Z2KYS",
+        "World2Z3KYS", "World2AActionKYS", "World2DiaryActionKYS", "World2ZActionKYS", "World2Digipack1KYS", "World2Digipack2KYS", "World2Mini1KYS",
+        "World2Mini2KYS", "World2Mini3KYS", "World2Image1KYS", "World2Image2KYS", "World2Image3KYS", "World2Image4KYS", "World2Image5KYS",
+        "World2Image6KYS", "World2PC1V1KYS", "World2PC1V2KYS", "World2PC1V3KYS", "World2PC1V4KYS", "World2PC2V1KYS", "World2PC2V2KYS", "World2PC3V1KYS",
+        "World2PC3V2KYS", "WorldFinAVAKYS", "WorldFinAVZKYS", "WorldFinDiaryVAKYS", "WorldFinDiaryVZKYS", "WorldFinZVAKYS", "WorldFinZVZKYS",
+        "WorldFinDigipackKYS", "WorldFinDigipackUSEUKYS", "WorldFinStandingKYS", "WorldFinMiniKYS", "WorldFinPhotocardKYS", "WorldFinImageKYS",
+        "WorldFinPolaroid1KYS", "WorldFinPolaroid2KYS", "GoldenHour1AVAKYS", "GoldenHour1AVZKYS", "GoldenHour1DiaryAKYS", "GoldenHour1DiaryZKYS",
+        "GoldenHour1ZVAKYS", "GoldenHour1ZVZKYS", "GoldenHour1PocaQRKYS", "GoldenHour1PocaImageKYS", "GoldenHour1PocaPCAKYS", "GoldenHour1PocaPCZKYS",
+        "GoldenHour1PlatformMiniKYS", "GoldenHour1PlatformImageKYS", "GoldenHour1PlatformPCAKYS", "GoldenHour1PlatformPCZKYS", "GoldenHour1Digipack1KYS",
+        "GoldenHour1Digipack2KYS", "GoldenHour1Digipack3KYS", "GoldenHour1Digipack4KYS", "GoldenHour1Digipack5KYS", "GoldenHour1Digipack6KYS",
+        "GoldenHour1Digipack7KYS", "GoldenHour1Digipack8KYS", "GoldenHour2ToAKYS", "GoldenHour2ToZKYS", "GoldenHour2DiaryAKYS", "GoldenHour2DiaryZKYS",
+        "GoldenHour2ForAKYS", "GoldenHour2ForZKYS", "GoldenHour2PocaToQRKYS", "GoldenHour2PocaToImageKYS", "GoldenHour2PocaToAKYS", "GoldenHour2PocaToZKYS",
+        "GoldenHour2PocaDiaryQRKYS", "GoldenHour2PocaDiaryImageKYS", "GoldenHour2PocaDiaryAKYS", "GoldenHour2PocaDiaryZKYS", "GoldenHour2PocaForQRKYS",
+        "GoldenHour2PocaForImageKYS", "GoldenHour2PocaForAKYS", "GoldenHour2PocaForZKYS", "GoldenHour2Digipack1KYS", "GoldenHour2Digipack2KYS",
+        "GoldenHour2Digipack3KYS", "GoldenHour2Digipack4KYS", "GoldenHour2Digipack5KYS", "GoldenHour2Digipack6KYS"]);
+        KYS.Add([""]);
+        KYS.Add(["TreasureFinAKYS", "TreasureFinZKYS", "TreasureShiftAKYS", "TreasureShiftZKYS", "TreasureMapAKYS", "TreasureMapZKYS", "IntoAtoZRegularKYS",
+        "IntoAtoZLimited1KYS", "IntoAtoZLimited2KYS", "DreamersAKYS", "DreamersBKYS", "DreamersAtinyKYS", "BeyondZeroAKYS", "BeyondZeroBKYS", "BeyondZeroAtinyKYS",
+        "ParadigmLimitedAKYS", "ParadigmLimitedBKYS", "ParadigmRegularAKYS", "ParadigmRegularBKYS", "ParadigmSoloAKYS", "ParadigmSoloBKYS", "ParadigmAtinyKYS",
+        "LimitlessA1KYS", "LimitlessA2KYS", "LimitlessB1KYS", "LimitlessB2KYS", "LimitlessNormalUnit1KYS", "LimitlessNormalUnit2KYS", "LimitlessAtiny1KYS",
+        "LimitlessAtiny2KYS", "NotOkayA1KYS", "NotOkayA2KYS", "NotOkayB1KYS", "NotOkayB2KYS", "NotOkayCKYS", "NotOkayDKYS", "NotOkayE1KYS", "NotOkayE2KYS",
+        "NotOkayAtiny1KYS", "NotOkayAtiny2KYS", "NotOkayAtinyUnitKYS","BirthdayASoloKYS", "BirthdayBSoloKYS", "BirthdayAtiny1KYS", "BirthdayAtiny2KYS",
+        "BirthdayAtiny3KYS", "BirthdayAtiny4KYS", "BirthdayFlashPriceKYS", "BirthdayRegularKYS", "BirthdayALimited1KYS", "BirthdayALimited2KYS", "BirthdayBLimited1KYS",
+        "BirthdayBLimited2KYS"]);
+        KYS.Add(["AllToActionTowerKYS", "IntoAToZPopUp1KYS", "IntoAToZPopUp2KYS", "DreamersTowerKYS", "DreamersShop1KYS", "DreamersShop2KYS",
+        "BeyondZeroTowerClearKYS", "BeyondZeroTowerPrizeAKYS", "BeyondZeroTowerPrizeDKYS", "BeyondZeroHMVHoloKYS", "ParadigmTowerOfflineAKYS", "ParadigmTowerOfflineBKYS",
+        "ParadigmTowerOnlineKYS", "ParadigmTowerOfflineKYS", "ParadigmTowerPolaroidKYS", "ParadigmTowerLuckyDrawKYS", "ParadigmHMVHoloKYS", "LimitlessTowerClearKYS",
+        "LimitlessTowerPopUpKYS", "LimitlessTowerPolaroidKYS", "LimitlessTowerBadgeKYS", "LimitlessHMVHoloKYS", "LimitlessHMVPolaroidKYS", "LimitlessHMVCouponKYS",
+        "NotOkayTowerKYS", "NotOkayTowerLuckyDrawKYS", "NotOkayTowerShibuyaLDKYS", "NotOkayFJFanClubKYS", "NotOkayJFanClubSoloKYS", "NotOkayRakutenKYS",
+        "NotOkayHMVKYS", "NotOkayHMVLuckyDrawOnlineKYS", "NotOkayHMVLuckyDrawExclusiveKYS", "NotOkayHMVCouponKYS", "NotOkayGUniversalKYS", "NotOkayUniversalLuckyDrawKYS",
+        "NotOkayUniversalVenue1KYS", "NotOkayUniversalVenue2KYS", "NotOkayTargetKYS", "BirthdayJFanclubSoloKYS", "BirthdayJFanclubKYS", "BirthdayTowerKYS",
+        "BirthdayTowerLuckyDrawKYS", "BirthdayTowerShibuyaLDKYS", "BirthdayUniversalKYS", "BirthdayUniversalLuckyDrawKYS", "BirthdayHMVOfflineLDKYS",
+        "BirthdayRakutenLuckyDrawKYS", "BirthdayNeowingKYS", "BirthdayTowerVenue1KYS", "BirthdayTowerVenue2KYS", "BirthdayHMVClearKYS", "BirthdayHMVOnlineLDKYS"]);
+        KYS.Add([""]);
+
+        CSN.Add(["PirateKingCSN", "SayMyNameCSN", "IllusionVerCSN", "WaveVerCSN", "TreasureFinAVerCSN", "TreasureFinZVerCSN",
+        "1stAnnivAdultCSN", "1stAnnivBabyCSN", "Treasure1AVerCSN", "Treasure1ZVerCSN", "Inception1CSN", "Inception2CSN", "Thanxx1CSN",
+        "Thanxx2CSN", "ZeroFever1DiaryCSN", "ZeroFever2A1CSN", "ZeroFever2A2CSN", "ZeroFever2ALimitedCSN", "ZeroFever2Diary1CSN",
+        "ZeroFever2Diary2CSN", "ZeroFever2DiaryLimitedCSN", "ZeroFever2Z1CSN", "ZeroFever2Z2CSN", "ZeroFever2ZLimitedCSN", "SeasonSongs1CSN",
+        "SeasonSongs2CSN", "SeasonSongsUnitCSN", "ZeroFever3A1CSN", "ZeroFever3A2CSN", "ZeroFever3ALimitedCSN", "ZeroFever3Diary1CSN", "ZeroFever3Diary2CSN",
+        "ZeroFever3DiaryLimitedCSN", "ZeroFever3Z1CSN", "ZeroFever3Z2CSN", "ZeroFever3ZLimitedCSN", "ZeroFeverEpilogueA1CSN", "ZeroFeverEpilogueA2CSN",
+        "ZeroFeverEpilogueALimitedCSN", "ZeroFeverEpilogueDiary1CSN", "ZeroFeverEpilogueDiary2CSN", "ZeroFeverEpilogueDiaryLimitedCSN",
+        "ZeroFeverEpilogueZ1CSN", "ZeroFeverEpilogueZ2CSN", "ZeroFeverEpilogueZLimitedCSN", "World1A1CSN", "World1A2CSN", "World1ALimitedCSN",
+        "World1Diary1CSN", "World1Diary2CSN", "World1DiaryLimitedCSN", "World1Z1CSN", "World1Z2CSN", "World1ZLimitedCSN", "World1AIDCSN",
+        "World1DiaryIDCSN", "World1ZIDCSN", "World1DigipackCSN", "SpinOffA1CSN", "SpinOffA2CSN", "SpinOffAQRCSN", "SpinOffAFaveCSN", "SpinOffZ1CSN", "SpinOffZ2CSN",
+        "SpinOffZQRCSN", "SpinOffZFaveCSN", "SpinOffWitness1CSN", "SpinOffWitness2CSN", "SpinOffWitness3CSN", "World2A1CSN", "World2A2CSN", "World2A3CSN",
+        "World2Diary1CSN", "World2Diary2Unit1CSN", "World2Diary2Unit2CSN", "World2Diary3Unit1CSN", "World2Diary3Unit2CSN", "World2Z1CSN", "World2Z2CSN",
+        "World2Z3CSN", "World2AActionCSN", "World2DiaryActionCSN", "World2ZActionCSN", "World2Digipack1CSN", "World2Digipack2CSN", "World2Mini1CSN",
+        "World2Mini2CSN", "World2Mini3CSN", "World2Image1CSN", "World2Image2CSN", "World2Image3CSN", "World2Image4CSN", "World2Image5CSN",
+        "World2Image6CSN", "World2PC1V1CSN", "World2PC1V2CSN", "World2PC1V3CSN", "World2PC1V4CSN", "World2PC2V1CSN", "World2PC2V2CSN", "World2PC3V1CSN",
+        "World2PC3V2CSN", "WorldFinAVACSN", "WorldFinAVZCSN", "WorldFinDiaryVACSN", "WorldFinDiaryVZCSN", "WorldFinZVACSN", "WorldFinZVZCSN",
+        "WorldFinDigipackCSN", "WorldFinDigipackUSEUCSN", "WorldFinStandingCSN", "WorldFinMiniCSN", "WorldFinPhotocardCSN", "WorldFinImageCSN",
+        "WorldFinPolaroid1CSN", "WorldFinPolaroid2CSN", "GoldenHour1AVACSN", "GoldenHour1AVZCSN", "GoldenHour1DiaryACSN", "GoldenHour1DiaryZCSN",
+        "GoldenHour1ZVACSN", "GoldenHour1ZVZCSN", "GoldenHour1PocaQRCSN", "GoldenHour1PocaImageCSN", "GoldenHour1PocaPCACSN", "GoldenHour1PocaPCZCSN",
+        "GoldenHour1PlatformMiniCSN", "GoldenHour1PlatformImageCSN", "GoldenHour1PlatformPCACSN", "GoldenHour1PlatformPCZCSN", "GoldenHour1Digipack1CSN",
+        "GoldenHour1Digipack2CSN", "GoldenHour1Digipack3CSN", "GoldenHour1Digipack4CSN", "GoldenHour1Digipack5CSN", "GoldenHour1Digipack6CSN",
+        "GoldenHour1Digipack7CSN", "GoldenHour1Digipack8CSN", "GoldenHour2ToACSN", "GoldenHour2ToZCSN", "GoldenHour2DiaryACSN", "GoldenHour2DiaryZCSN",
+        "GoldenHour2ForACSN", "GoldenHour2ForZCSN", "GoldenHour2PocaToQRCSN", "GoldenHour2PocaToImageCSN", "GoldenHour2PocaToACSN", "GoldenHour2PocaToZCSN",
+        "GoldenHour2PocaDiaryQRCSN", "GoldenHour2PocaDiaryImageCSN", "GoldenHour2PocaDiaryACSN", "GoldenHour2PocaDiaryZCSN", "GoldenHour2PocaForQRCSN",
+        "GoldenHour2PocaForImageCSN", "GoldenHour2PocaForACSN", "GoldenHour2PocaForZCSN", "GoldenHour2Digipack1CSN", "GoldenHour2Digipack2CSN",
+        "GoldenHour2Digipack3CSN", "GoldenHour2Digipack4CSN", "GoldenHour2Digipack5CSN", "GoldenHour2Digipack6CSN"]);
+        CSN.Add([""]);
+        CSN.Add(["TreasureFinACSN", "TreasureFinZCSN", "TreasureShiftACSN", "TreasureShiftZCSN", "TreasureMapACSN", "TreasureMapZCSN", "IntoAtoZRegularCSN",
+        "IntoAtoZLimited1CSN", "IntoAtoZLimited2CSN", "DreamersACSN", "DreamersBCSN", "DreamersAtinyCSN", "BeyondZeroACSN", "BeyondZeroBCSN", "BeyondZeroAtinyCSN",
+        "ParadigmLimitedACSN", "ParadigmLimitedBCSN", "ParadigmRegularACSN", "ParadigmRegularBCSN", "ParadigmSoloACSN", "ParadigmSoloBCSN", "ParadigmAtinyCSN",
+        "LimitlessA1CSN", "LimitlessA2CSN", "LimitlessB1CSN", "LimitlessB2CSN", "LimitlessNormalUnit1CSN", "LimitlessNormalUnit2CSN", "LimitlessAtiny1CSN",
+        "LimitlessAtiny2CSN", "NotOkayA1CSN", "NotOkayA2CSN", "NotOkayB1CSN", "NotOkayB2CSN", "NotOkayCCSN", "NotOkayDCSN", "NotOkayE1CSN", "NotOkayE2CSN",
+        "NotOkayAtiny1CSN", "NotOkayAtiny2CSN", "NotOkayAtinyUnitCSN","BirthdayASoloCSN", "BirthdayBSoloCSN", "BirthdayAtiny1CSN", "BirthdayAtiny2CSN",
+        "BirthdayAtiny3CSN", "BirthdayAtiny4CSN", "BirthdayFlashPriceCSN", "BirthdayRegularCSN", "BirthdayALimited1CSN", "BirthdayALimited2CSN",
+        "BirthdayBLimited1CSN", "BirthdayBLimited2CSN"]);
+        CSN.Add([""]);
+        CSN.Add([""]);
+
+        SMG.Add(["PirateKingSMG", "SayMyNameSMG", "IllusionVerSMG", "WaveVerSMG", "TreasureFinAVerSMG", "TreasureFinZVerSMG",
+        "1stAnnivAdultSMG", "1stAnnivBabySMG", "Treasure1AVerSMG", "Treasure1ZVerSMG", "Inception1SMG", "Inception2SMG", "Thanxx1SMG",
+        "Thanxx2SMG", "ZeroFever1DiarySMG", "SeasonSongs1SMG", "SeasonSongs2SMG", "SeasonSongsUnitSMG", "ZeroFever3A1SMG", "ZeroFever3A2SMG",
+        "ZeroFever3ALimitedSMG", "ZeroFever3Diary1SMG", "ZeroFever3Diary2SMG", "ZeroFever3DiaryLimitedSMG", "ZeroFever3Z1SMG", "ZeroFever3Z2SMG",
+        "ZeroFever3ZLimitedSMG", "ZeroFeverEpilogueA1SMG", "ZeroFeverEpilogueA2SMG", "ZeroFeverEpilogueALimitedSMG", "ZeroFeverEpilogueDiary1SMG",
+        "ZeroFeverEpilogueDiary2SMG", "ZeroFeverEpilogueDiaryLimitedSMG", "ZeroFeverEpilogueZ1SMG", "ZeroFeverEpilogueZ2SMG", "ZeroFeverEpilogueZLimitedSMG",
+        "World1A1SMG", "World1A2SMG", "World1ALimitedSMG", "World1Diary1SMG", "World1Diary2SMG", "World1DiaryLimitedSMG", "World1Z1SMG", "World1Z2SMG",
+        "World1ZLimitedSMG", "World1AIDSMG", "World1DiaryIDSMG", "World1ZIDSMG", "World1DigipackSMG", "SpinOffA1SMG", "SpinOffA2SMG", "SpinOffAQRSMG",
+        "SpinOffAFaveSMG", "SpinOffZ1SMG", "SpinOffZ2SMG", "SpinOffZQRSMG", "SpinOffZFaveSMG", "SpinOffWitness1SMG", "SpinOffWitness2SMG", "SpinOffWitness3SMG",
+        "World2A1SMG", "World2A2SMG", "World2A3SMG", "World2Diary1SMG", "World2Diary2Unit1SMG", "World2Diary2Unit2SMG", "World2Diary3Unit1SMG",
+        "World2Diary3Unit2SMG", "World2Z1SMG", "World2Z2SMG", "World2Z3SMG", "World2AActionSMG", "World2DiaryActionSMG", "World2ZActionSMG",
+        "World2Digipack1SMG", "World2Digipack2SMG", "World2Mini1SMG", "World2Mini2SMG", "World2Mini3SMG", "World2Image1SMG", "World2Image2SMG",
+        "World2Image3SMG", "World2Image4SMG", "World2Image5SMG", "World2Image6SMG", "World2PC1V1SMG", "World2PC1V2SMG", "World2PC1V3SMG", "World2PC1V4SMG",
+        "World2PC2V1SMG", "World2PC2V2SMG", "World2PC3V1SMG", "World2PC3V2SMG", "WorldFinAVASMG", "WorldFinAVZSMG", "WorldFinDiaryVASMG", "WorldFinDiaryVZSMG",
+        "WorldFinZVASMG", "WorldFinZVZSMG", "WorldFinDigipackSMG", "WorldFinDigipackUSEUSMG", "WorldFinStandingSMG", "WorldFinMiniSMG", "WorldFinPhotocardSMG",
+        "WorldFinImageSMG", "WorldFinPolaroid1SMG", "WorldFinPolaroid2SMG", "GoldenHour1AVASMG", "GoldenHour1AVZSMG", "GoldenHour1DiaryASMG", "GoldenHour1DiaryZSMG",
+        "GoldenHour1ZVASMG", "GoldenHour1ZVZSMG", "GoldenHour1PocaQRSMG", "GoldenHour1PocaImageSMG", "GoldenHour1PocaPCASMG", "GoldenHour1PocaPCZSMG",
+        "GoldenHour1PlatformMiniSMG", "GoldenHour1PlatformImageSMG", "GoldenHour1PlatformPCASMG", "GoldenHour1PlatformPCZSMG", "GoldenHour1Digipack1SMG",
+        "GoldenHour1Digipack2SMG", "GoldenHour1Digipack3SMG", "GoldenHour1Digipack4SMG", "GoldenHour1Digipack5SMG", "GoldenHour1Digipack6SMG",
+        "GoldenHour1Digipack7SMG", "GoldenHour1Digipack8SMG", "GoldenHour2ToASMG", "GoldenHour2ToZSMG", "GoldenHour2DiaryASMG", "GoldenHour2DiaryZSMG",
+        "GoldenHour2ForASMG", "GoldenHour2ForZSMG", "GoldenHour2PocaToQRSMG", "GoldenHour2PocaToImageSMG", "GoldenHour2PocaToASMG", "GoldenHour2PocaToZSMG",
+        "GoldenHour2PocaDiaryQRSMG", "GoldenHour2PocaDiaryImageSMG", "GoldenHour2PocaDiaryASMG", "GoldenHour2PocaDiaryZSMG", "GoldenHour2PocaForQRSMG",
+        "GoldenHour2PocaForImageSMG", "GoldenHour2PocaForASMG", "GoldenHour2PocaForZSMG", "GoldenHour2Digipack1SMG", "GoldenHour2Digipack2SMG",
+        "GoldenHour2Digipack3SMG", "GoldenHour2Digipack4SMG", "GoldenHour2Digipack5SMG", "GoldenHour2Digipack6SMG"]);
+        SMG.Add([""]);
+        SMG.Add(["TreasureFinASMG", "TreasureFinZSMG", "TreasureShiftASMG", "TreasureShiftZSMG", "TreasureMapASMG", "TreasureMapZSMG", "BeyondZeroASMG",
+        "BeyondZeroBSMG", "BeyondZeroAtinySMG", "ParadigmLimitedASMG", "ParadigmLimitedBSMG", "ParadigmRegularASMG", "ParadigmRegularBSMG",
+        "ParadigmSoloASMG", "ParadigmSoloBSMG", "ParadigmAtinySMG", "LimitlessA1SMG", "LimitlessA2SMG", "LimitlessB1SMG", "LimitlessB2SMG", "LimitlessNormalUnit1SMG",
+        "LimitlessNormalUnit2SMG", "LimitlessAtiny1SMG", "LimitlessAtiny2SMG", "NotOkayA1SMG", "NotOkayA2SMG", "NotOkayB1SMG", "NotOkayB2SMG", "NotOkayCSMG",
+        "NotOkayDSMG", "NotOkayE1SMG", "NotOkayE2SMG", "NotOkayAtiny1SMG", "NotOkayAtiny2SMG", "NotOkayAtinyUnitSMG","BirthdayASoloSMG", "BirthdayBSoloSMG",
+        "BirthdayAtiny1SMG", "BirthdayAtiny2SMG", "BirthdayAtiny3SMG", "BirthdayAtiny4SMG", "BirthdayFlashPriceSMG", "BirthdayRegularSMG", "BirthdayALimited1SMG",
+        "BirthdayALimited2SMG", "BirthdayBLimited1SMG", "BirthdayBLimited2SMG"]);
+        SMG.Add([""]);
+        SMG.Add([""]);
+
+        JWY.Add(["PirateKingJWY", "SayMyNameJWY", "IllusionVerJWY", "WaveVerJWY", "TreasureFinAVerJWY", "TreasureFinZVerJWY",
+        "1stAnnivAdultJWY", "1stAnnivBabyJWY", "Treasure1AVerJWY", "Treasure1ZVerJWY", "Inception1JWY", "Inception2JWY", "Thanxx1JWY",
+        "Thanxx2JWY", "ZeroFever1DiaryJWY", "ZeroFever2A1JWY", "ZeroFever2A2JWY", "ZeroFever2ALimitedJWY", "ZeroFever2Diary1JWY",
+        "ZeroFever2Diary2JWY", "ZeroFever2DiaryLimitedJWY", "ZeroFever2Z1JWY", "ZeroFever2Z2JWY", "ZeroFever2ZLimitedJWY", "SeasonSongs1JWY",
+        "SeasonSongs2JWY", "SeasonSongsUnitJWY", "ZeroFever3A1JWY", "ZeroFever3A2JWY", "ZeroFever3ALimitedJWY", "ZeroFever3Diary1JWY", "ZeroFever3Diary2JWY",
+        "ZeroFever3DiaryLimitedJWY", "ZeroFever3Z1JWY", "ZeroFever3Z2JWY", "ZeroFever3ZLimitedJWY", "ZeroFeverEpilogueA1JWY", "ZeroFeverEpilogueA2JWY",
+        "ZeroFeverEpilogueALimitedJWY", "ZeroFeverEpilogueDiary1JWY", "ZeroFeverEpilogueDiary2JWY", "ZeroFeverEpilogueDiaryLimitedJWY",
+        "ZeroFeverEpilogueZ1JWY", "ZeroFeverEpilogueZ2JWY", "ZeroFeverEpilogueZLimitedJWY", "World1A1JWY", "World1A2JWY", "World1ALimitedJWY",
+        "World1Diary1JWY", "World1Diary2JWY", "World1DiaryLimitedJWY", "World1Z1JWY", "World1Z2JWY", "World1ZLimitedJWY", "World1AIDJWY",
+        "World1DiaryIDJWY", "World1ZIDJWY", "World1DigipackJWY", "SpinOffA1JWY", "SpinOffA2JWY", "SpinOffAQRJWY", "SpinOffAFaveJWY", "SpinOffZ1JWY", "SpinOffZ2JWY",
+        "SpinOffZQRJWY", "SpinOffZFaveJWY", "SpinOffWitness1JWY", "SpinOffWitness2JWY", "SpinOffWitness3JWY", "World2A1JWY", "World2A2JWY", "World2A3JWY",
+        "World2Diary1JWY", "World2Diary2Unit1JWY", "World2Diary2Unit2JWY", "World2Diary3Unit1JWY", "World2Diary3Unit2JWY", "World2Z1JWY", "World2Z2JWY",
+        "World2Z3JWY", "World2AActionJWY", "World2DiaryActionJWY", "World2ZActionJWY", "World2Digipack1JWY", "World2Digipack2JWY", "World2Mini1JWY",
+        "World2Mini2JWY", "World2Mini3JWY", "World2Image1JWY", "World2Image2JWY", "World2Image3JWY", "World2Image4JWY", "World2Image5JWY",
+        "World2Image6JWY", "World2PC1V1JWY", "World2PC1V2JWY", "World2PC1V3JWY", "World2PC1V4JWY", "World2PC2V1JWY", "World2PC2V2JWY", "World2PC3V1JWY",
+        "World2PC3V2JWY", "WorldFinAVAJWY", "WorldFinAVZJWY", "WorldFinDiaryVAJWY", "WorldFinDiaryVZJWY", "WorldFinZVAJWY", "WorldFinZVZJWY",
+        "WorldFinDigipackJWY", "WorldFinDigipackUSEUJWY", "WorldFinStandingJWY", "WorldFinMiniJWY", "WorldFinPhotocardJWY", "WorldFinImageJWY",
+        "WorldFinPolaroid1JWY", "WorldFinPolaroid2JWY", "GoldenHour1AVAJWY", "GoldenHour1AVZJWY", "GoldenHour1DiaryAJWY", "GoldenHour1DiaryZJWY",
+        "GoldenHour1ZVAJWY", "GoldenHour1ZVZJWY", "GoldenHour1PocaQRJWY", "GoldenHour1PocaImageJWY", "GoldenHour1PocaPCAJWY", "GoldenHour1PocaPCZJWY",
+        "GoldenHour1PlatformMiniJWY", "GoldenHour1PlatformImageJWY", "GoldenHour1PlatformPCAJWY", "GoldenHour1PlatformPCZJWY", "GoldenHour1Digipack1JWY",
+        "GoldenHour1Digipack2JWY", "GoldenHour1Digipack3JWY", "GoldenHour1Digipack4JWY", "GoldenHour1Digipack5JWY", "GoldenHour1Digipack6JWY",
+        "GoldenHour1Digipack7JWY", "GoldenHour1Digipack8JWY", "GoldenHour2ToAJWY", "GoldenHour2ToZJWY", "GoldenHour2DiaryAJWY", "GoldenHour2DiaryZJWY",
+        "GoldenHour2ForAJWY", "GoldenHour2ForZJWY", "GoldenHour2PocaToQRJWY", "GoldenHour2PocaToImageJWY", "GoldenHour2PocaToAJWY", "GoldenHour2PocaToZJWY",
+        "GoldenHour2PocaDiaryQRJWY", "GoldenHour2PocaDiaryImageJWY", "GoldenHour2PocaDiaryAJWY", "GoldenHour2PocaDiaryZJWY", "GoldenHour2PocaForQRJWY",
+        "GoldenHour2PocaForImageJWY", "GoldenHour2PocaForAJWY", "GoldenHour2PocaForZJWY", "GoldenHour2Digipack1JWY", "GoldenHour2Digipack2JWY",
+        "GoldenHour2Digipack3JWY", "GoldenHour2Digipack4JWY", "GoldenHour2Digipack5JWY", "GoldenHour2Digipack6JWY"]);
+        JWY.Add([""]);
+        JWY.Add(["TreasureFinAJWY", "TreasureFinZJWY", "TreasureShiftAJWY", "TreasureShiftZJWY", "TreasureMapAJWY", "TreasureMapZJWY", "IntoAtoZRegularJWY",
+        "IntoAtoZLimited1JWY", "IntoAtoZLimited2JWY", "DreamersAJWY", "DreamersBJWY", "DreamersAtinyJWY", "BeyondZeroAJWY", "BeyondZeroBJWY", "BeyondZeroAtinyJWY",
+        "ParadigmLimitedAJWY", "ParadigmLimitedBJWY", "ParadigmRegularAJWY", "ParadigmRegularBJWY", "ParadigmSoloAJWY", "ParadigmSoloBJWY", "ParadigmAtinyJWY",
+        "LimitlessA1JWY", "LimitlessA2JWY", "LimitlessB1JWY", "LimitlessB2JWY", "LimitlessNormalUnit1JWY", "LimitlessNormalUnit2JWY", "LimitlessAtiny1JWY",
+        "LimitlessAtiny2JWY", "NotOkayA1JWY", "NotOkayA2JWY", "NotOkayB1JWY", "NotOkayB2JWY", "NotOkayCJWY", "NotOkayDJWY", "NotOkayE1JWY", "NotOkayE2JWY",
+        "NotOkayAtiny1JWY", "NotOkayAtiny2JWY", "NotOkayAtinyUnitJWY","BirthdayASoloJWY", "BirthdayBSoloJWY", "BirthdayAtiny1JWY", "BirthdayAtiny2JWY",
+        "BirthdayAtiny3JWY", "BirthdayAtiny4JWY", "BirthdayFlashPriceJWY", "BirthdayRegularJWY", "BirthdayALimited1JWY", "BirthdayALimited2JWY",
+        "BirthdayBLimited1JWY", "BirthdayBLimited2JWY"]);
+        JWY.Add([""]);
+        JWY.Add([""]);
+
+        CJH.Add(["PirateKingCJH", "SayMyNameCJH", "IllusionVerCJH", "WaveVerCJH", "TreasureFinAVerCJH", "TreasureFinZVerCJH",
+        "1stAnnivAdultCJH", "1stAnnivBabyCJH", "Treasure1AVerCJH", "Treasure1ZVerCJH", "Inception1CJH", "Inception2CJH", "Thanxx1CJH",
+        "Thanxx2CJH", "ZeroFever1DiaryCJH", "ZeroFever2A1CJH", "ZeroFever2A2CJH", "ZeroFever2ALimitedCJH", "ZeroFever2Diary1CJH",
+        "ZeroFever2Diary2CJH", "ZeroFever2DiaryLimitedCJH", "ZeroFever2Z1CJH", "ZeroFever2Z2CJH", "ZeroFever2ZLimitedCJH", "SeasonSongs1CJH",
+        "SeasonSongs2CJH", "SeasonSongsUnitCJH", "ZeroFever3A1CJH", "ZeroFever3A2CJH", "ZeroFever3ALimitedCJH", "ZeroFever3Diary1CJH", "ZeroFever3Diary2CJH",
+        "ZeroFever3DiaryLimitedCJH", "ZeroFever3Z1CJH", "ZeroFever3Z2CJH", "ZeroFever3ZLimitedCJH", "ZeroFeverEpilogueA1CJH", "ZeroFeverEpilogueA2CJH",
+        "ZeroFeverEpilogueALimitedCJH", "ZeroFeverEpilogueDiary1CJH", "ZeroFeverEpilogueDiary2CJH", "ZeroFeverEpilogueDiaryLimitedCJH",
+        "ZeroFeverEpilogueZ1CJH", "ZeroFeverEpilogueZ2CJH", "ZeroFeverEpilogueZLimitedCJH", "World1A1CJH", "World1A2CJH", "World1ALimitedCJH",
+        "World1Diary1CJH", "World1Diary2CJH", "World1DiaryLimitedCJH", "World1Z1CJH", "World1Z2CJH", "World1ZLimitedCJH", "World1AIDCJH",
+        "World1DiaryIDCJH", "World1ZIDCJH", "World1DigipackCJH", "SpinOffA1CJH", "SpinOffA2CJH", "SpinOffAQRCJH", "SpinOffAFaveCJH", "SpinOffZ1CJH", "SpinOffZ2CJH",
+        "SpinOffZQRCJH", "SpinOffZFaveCJH", "SpinOffWitness1CJH", "SpinOffWitness2CJH", "SpinOffWitness3CJH", "World2A1CJH", "World2A2CJH", "World2A3CJH",
+        "World2Diary1CJH", "World2Diary2Unit1CJH", "World2Diary2Unit2CJH", "World2Diary3Unit1CJH", "World2Diary3Unit2CJH", "World2Z1CJH", "World2Z2CJH",
+        "World2Z3CJH", "World2AActionCJH", "World2DiaryActionCJH", "World2ZActionCJH", "World2Digipack1CJH", "World2Digipack2CJH", "World2Mini1CJH",
+        "World2Mini2CJH", "World2Mini3CJH", "World2Image1CJH", "World2Image2CJH", "World2Image3CJH", "World2Image4CJH", "World2Image5CJH",
+        "World2Image6CJH", "World2PC1V1CJH", "World2PC1V2CJH", "World2PC1V3CJH", "World2PC1V4CJH", "World2PC2V1CJH", "World2PC2V2CJH", "World2PC3V1CJH",
+        "World2PC3V2CJH", "WorldFinAVACJH", "WorldFinAVZCJH", "WorldFinDiaryVACJH", "WorldFinDiaryVZCJH", "WorldFinZVACJH", "WorldFinZVZCJH",
+        "WorldFinDigipackCJH", "WorldFinDigipackUSEUCJH", "WorldFinStandingCJH", "WorldFinMiniCJH", "WorldFinPhotocardCJH", "WorldFinImageCJH",
+        "WorldFinPolaroid1CJH", "WorldFinPolaroid2CJH", "GoldenHour1AVACJH", "GoldenHour1AVZCJH", "GoldenHour1DiaryACJH", "GoldenHour1DiaryZCJH",
+        "GoldenHour1ZVACJH", "GoldenHour1ZVZCJH", "GoldenHour1PocaQRCJH", "GoldenHour1PocaImageCJH", "GoldenHour1PocaPCACJH", "GoldenHour1PocaPCZCJH",
+        "GoldenHour1PlatformMiniCJH", "GoldenHour1PlatformImageCJH", "GoldenHour1PlatformPCACJH", "GoldenHour1PlatformPCZCJH", "GoldenHour1Digipack1CJH",
+        "GoldenHour1Digipack2CJH", "GoldenHour1Digipack3CJH", "GoldenHour1Digipack4CJH", "GoldenHour1Digipack5CJH", "GoldenHour1Digipack6CJH",
+        "GoldenHour1Digipack7CJH", "GoldenHour1Digipack8CJH", "GoldenHour2ToACJH", "GoldenHour2ToZCJH", "GoldenHour2DiaryACJH", "GoldenHour2DiaryZCJH",
+        "GoldenHour2ForACJH", "GoldenHour2ForZCJH", "GoldenHour2PocaToQRCJH", "GoldenHour2PocaToImageCJH", "GoldenHour2PocaToACJH", "GoldenHour2PocaToZCJH",
+        "GoldenHour2PocaDiaryQRCJH", "GoldenHour2PocaDiaryImageCJH", "GoldenHour2PocaDiaryACJH", "GoldenHour2PocaDiaryZCJH", "GoldenHour2PocaForQRCJH",
+        "GoldenHour2PocaForImageCJH", "GoldenHour2PocaForACJH", "GoldenHour2PocaForZCJH", "GoldenHour2Digipack1CJH", "GoldenHour2Digipack2CJH",
+        "GoldenHour2Digipack3CJH", "GoldenHour2Digipack4CJH", "GoldenHour2Digipack5CJH", "GoldenHour2Digipack6CJH"]);
+        CJH.Add([""]);
+        CJH.Add(["TreasureFinACJH", "TreasureFinZCJH", "TreasureShiftACJH", "TreasureShiftZCJH", "TreasureMapACJH", "TreasureMapZCJH", "IntoAtoZRegularCJH",
+        "IntoAtoZLimited1CJH", "IntoAtoZLimited2CJH", "DreamersACJH", "DreamersBCJH", "DreamersAtinyCJH", "BeyondZeroACJH", "BeyondZeroBCJH", "BeyondZeroAtinyCJH",
+        "ParadigmLimitedACJH", "ParadigmLimitedBCJH", "ParadigmRegularACJH", "ParadigmRegularBCJH", "ParadigmSoloACJH", "ParadigmSoloBCJH", "ParadigmAtinyCJH",
+        "LimitlessA1CJH", "LimitlessA2CJH", "LimitlessB1CJH", "LimitlessB2CJH", "LimitlessNormalUnit1CJH", "LimitlessNormalUnit2CJH", "LimitlessAtiny1CJH",
+        "LimitlessAtiny2CJH", "NotOkayA1CJH", "NotOkayA2CJH", "NotOkayB1CJH", "NotOkayB2CJH", "NotOkayCCJH", "NotOkayDCJH", "NotOkayE1CJH", "NotOkayE2CJH",
+        "NotOkayAtiny1CJH", "NotOkayAtiny2CJH", "NotOkayAtinyUnitCJH","BirthdayASoloCJH", "BirthdayBSoloCJH", "BirthdayAtiny1CJH", "BirthdayAtiny2CJH",
+        "BirthdayAtiny3CJH", "BirthdayAtiny4CJH", "BirthdayFlashPriceCJH", "BirthdayRegularCJH", "BirthdayALimited1CJH", "BirthdayALimited2CJH",
+        "BirthdayBLimited1CJH", "BirthdayBLimited2CJH"]);
+        CJH.Add([""]);
+        CJH.Add([""]);
+    }
+
+    public List<string> PathList(List<string> list)
+    {
+        var basePath = "wwwroot/ImagesATEEZ/";
+        List<string> paths = new List<string>();
+        paths = list.Select(name => Path.Combine(basePath, name.Substring(name.Count() - 3, 3), name.Substring(0, name.Count() - 3) + ".png")).ToList();
+        return paths;
+    }
+}

@@ -1,0 +1,225 @@
+@using Microsoft.AspNetCore.Mvc
+@using Microsoft.AspNetCore.Mvc.Razor
+@model ModelView
+
+@{
+    int imagesPerRow = 6;
+}
+
+
+@{
+    ViewData["Title"] = "Park Seonghwa";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <p>Here is the list of PCs of Park Seonghwa.</p>
+</div>
+
+<br>
+
+<form asp-controller="member" asp-action="recupererValeursPSH" method="post">
+<!-- BOUTON 1 -->
+<button class="btn btn-secondary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhotos1">
+    Album
+</button>
+
+
+<div class="collapse" id="collapsePhotos1">
+@for (int i = 0; i < @Model.ListPCMember[0].Count(); i += imagesPerRow)
+{
+var chunk = @Model.ListPCMember[0].Skip(i).Take(imagesPerRow);
+<div class="container">
+    <div class="row">
+        @foreach (var image in chunk)
+        {
+            string selectedValue = "";
+            @if (@Model.UploadedWL.TopPriority.Contains(image))
+                selectedValue = "P";
+            else if(@Model.UploadedWL.Want.Contains(image))
+                selectedValue = "W";
+            else if(@Model.UploadedWL.Have.Contains(image))
+                selectedValue = "H";
+
+            var imageName = image.Replace("PSH", "") + ".png";
+            var imagePath = Url.Content($"~/ImagesATEEZ/PSH/{imageName}");
+
+            <div class="col-md-2 text-center mb-4">
+                <img src="@imagePath" alt="@image" class="img-fluid mb-2" />
+                <select name="@image" class="form-select">
+                    <option value="" selected="@(selectedValue == "" ? "selected" : null)">-- Select --</option>
+                    <option value="I" selected="@(selectedValue == "I" ? "selected" : null)">Indifferent</option>
+                    <option value="H" selected="@(selectedValue == "H" ? "selected" : null)">I have it</option>
+                    <option value="W" selected="@(selectedValue == "W" ? "selected" : null)">I want it</option>
+                    <option value="P" selected="@(selectedValue == "P" ? "selected" : null)">Top priority</option>
+                </select>
+            </div>
+        }
+    </div>
+</div>
+}
+</div>
+
+
+<!-- BOUTON 2 -->
+<button class="btn btn-secondary mb-2 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhotos2">
+    POBs
+</button>
+
+<div class="collapse" id="collapsePhotos2">
+@for (int i = 0; i < @Model.ListPCMember[1].Count(); i += imagesPerRow)
+{
+var chunk = @Model.ListPCMember[1].Skip(i).Take(imagesPerRow);
+<div class="container">
+    <div class="row">
+        @foreach (var image in chunk)
+        {
+            string selectedValue = "";
+            @if (@Model.UploadedWL.TopPriority.Contains(image))
+                selectedValue = "P";
+            else if(@Model.UploadedWL.Want.Contains(image))
+                selectedValue = "W";
+            else if(@Model.UploadedWL.Have.Contains(image))
+                selectedValue = "H";
+
+            var imageName = image.Replace("PSH", "") + ".png";
+            var imagePath = Url.Content($"~/ImagesATEEZ/PSH/{imageName}");
+
+            <div class="col-md-2 text-center mb-4">
+                <img src="@imagePath" alt="@image" class="img-fluid mb-2" />
+                <select name="@image" class="form-select">
+                    <option value="" selected="@(selectedValue == "" ? "selected" : null)">-- Select --</option>
+                    <option value="I" selected="@(selectedValue == "I" ? "selected" : null)">Indifferent</option>
+                    <option value="H" selected="@(selectedValue == "H" ? "selected" : null)">I have it</option>
+                    <option value="W" selected="@(selectedValue == "W" ? "selected" : null)">I want it</option>
+                    <option value="P" selected="@(selectedValue == "P" ? "selected" : null)">Top priority</option>
+                </select>
+            </div>
+        }
+    </div>
+</div>
+}
+</div>
+
+<!-- BOUTON 3 -->
+<button class="btn btn-secondary mb-2 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhotos3">
+    Japan Album
+</button>
+<div class="collapse" id="collapsePhotos3">
+@for (int i = 0; i < @Model.ListPCMember[2].Count(); i += imagesPerRow)
+{
+var chunk = @Model.ListPCMember[2].Skip(i).Take(imagesPerRow);
+<div class="container">
+    <div class="row">
+        @foreach (var image in chunk)
+        {
+            string selectedValue = "";
+            @if (@Model.UploadedWL.TopPriority.Contains(image))
+                selectedValue = "P";
+            else if(@Model.UploadedWL.Want.Contains(image))
+                selectedValue = "W";
+            else if(@Model.UploadedWL.Have.Contains(image))
+                selectedValue = "H";
+
+            var imageName = image.Replace("PSH", "") + ".png";
+            var imagePath = Url.Content($"~/ImagesATEEZ/PSH/{imageName}");
+
+            <div class="col-md-2 text-center mb-4">
+                <img src="@imagePath" alt="@image" class="img-fluid mb-2" />
+                <select name="@image" class="form-select">
+                    <option value="" selected="@(selectedValue == "" ? "selected" : null)">-- Select --</option>
+                    <option value="I" selected="@(selectedValue == "I" ? "selected" : null)">Indifferent</option>
+                    <option value="H" selected="@(selectedValue == "H" ? "selected" : null)">I have it</option>
+                    <option value="W" selected="@(selectedValue == "W" ? "selected" : null)">I want it</option>
+                    <option value="P" selected="@(selectedValue == "P" ? "selected" : null)">Top priority</option>
+                </select>
+            </div>
+        }
+    </div>
+</div>
+}
+</div>
+
+<!-- BOUTON 4 -->
+<button class="btn btn-secondary mb-2 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhotos4">
+    Japan POBs
+</button>
+<div class="collapse" id="collapsePhotos4">
+@for (int i = 0; i < @Model.ListPCMember[3].Count(); i += imagesPerRow)
+{
+var chunk = @Model.ListPCMember[3].Skip(i).Take(imagesPerRow);
+<div class="container">
+    <div class="row">
+        @foreach (var image in chunk)
+        {
+            string selectedValue = "";
+            @if (@Model.UploadedWL.TopPriority.Contains(image))
+                selectedValue = "P";
+            else if(@Model.UploadedWL.Want.Contains(image))
+                selectedValue = "W";
+            else if(@Model.UploadedWL.Have.Contains(image))
+                selectedValue = "H";
+
+            var imageName = image.Replace("PSH", "") + ".png";
+            var imagePath = Url.Content($"~/ImagesATEEZ/PSH/{imageName}");
+
+            <div class="col-md-2 text-center mb-4">
+                <img src="@imagePath" alt="@image" class="img-fluid mb-2" />
+                <select name="@image" class="form-select">
+                    <option value="" selected="@(selectedValue == "" ? "selected" : null)">-- Select --</option>
+                    <option value="I" selected="@(selectedValue == "I" ? "selected" : null)">Indifferent</option>
+                    <option value="H" selected="@(selectedValue == "H" ? "selected" : null)">I have it</option>
+                    <option value="W" selected="@(selectedValue == "W" ? "selected" : null)">I want it</option>
+                    <option value="P" selected="@(selectedValue == "P" ? "selected" : null)">Top priority</option>
+                </select>
+            </div>
+        }
+    </div>
+</div>
+}
+</div>
+
+<!-- BOUTON 5 -->
+<button class="btn btn-secondary mb-2 mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhotos5">
+    Merch
+</button>
+<div class="collapse" id="collapsePhotos5">
+@for (int i = 0; i < @Model.ListPCMember[4].Count(); i += imagesPerRow)
+{
+var chunk = @Model.ListPCMember[4].Skip(i).Take(imagesPerRow);
+<div class="container">
+    <div class="row">
+        @foreach (var image in chunk)
+        {
+            string selectedValue = "";
+            @if (@Model.UploadedWL.TopPriority.Contains(image))
+                selectedValue = "P";
+            else if(@Model.UploadedWL.Want.Contains(image))
+                selectedValue = "W";
+            else if(@Model.UploadedWL.Have.Contains(image))
+                selectedValue = "H";
+
+            var imageName = image.Replace("PSH", "") + ".png";
+            var imagePath = Url.Content($"~/ImagesATEEZ/PSH/{imageName}");
+
+            <div class="col-md-2 text-center mb-4">
+                <img src="@imagePath" alt="@image" class="img-fluid mb-2" />
+                <select name="@image" class="form-select">
+                    <option value="" selected="@(selectedValue == "" ? "selected" : null)">-- Select --</option>
+                    <option value="I" selected="@(selectedValue == "I" ? "selected" : null)">Indifferent</option>
+                    <option value="H" selected="@(selectedValue == "H" ? "selected" : null)">I have it</option>
+                    <option value="W" selected="@(selectedValue == "W" ? "selected" : null)">I want it</option>
+                    <option value="P" selected="@(selectedValue == "P" ? "selected" : null)">Top priority</option>
+                </select>
+            </div>
+        }
+    </div>
+</div>
+}</div>
+
+<br>
+<br>
+  <div class="col-md-12">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
+  </div>
+</form>
