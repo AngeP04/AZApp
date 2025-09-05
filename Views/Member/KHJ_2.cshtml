@@ -1,0 +1,193 @@
+@using Microsoft.AspNetCore.Mvc
+@using Microsoft.AspNetCore.Mvc.Razor
+@model ModelView
+
+
+@{
+    ViewData["Title"] = "Kim Hongjoong";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <p>Here is the list of PCs of Kim Hongloong, our captain.</p>
+</div>
+
+<br>
+
+<form asp-controller="member" asp-action="recupererValeursKHJ" method="post">
+
+@{
+    // On prépare les groupes
+    var groups = Model.ListPCs.GroupBy(pc => pc.album).ToList();
+}
+
+<!-- Sommaire -->
+<div class="mb-5 text-center">
+    <h2>Sommaire</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                @foreach (var group in groups.Take(groups.Count / 2))
+                {
+                    var safeId = group.Key.Replace(" ", "_");
+                    <li><a href="#@safeId">@group.Key</a></li>
+                }
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                @foreach (var group in groups.Skip(groups.Count / 2))
+                {
+                    var safeId = group.Key.Replace(" ", "_");
+                    <li><a href="#@safeId">@group.Key</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Affichage par album -->
+@foreach (var albumGroup in Model.ListPCs.GroupBy(pc => pc.album))
+{
+    <h3 id="@albumGroup.Key.Replace(" ", "_")" class="mt-4 mb-3">@albumGroup.Key</h3>
+    <hr />
+
+    @foreach (var categoryGroup in albumGroup.GroupBy(pc => pc.category))
+    {
+        <div class="container mb-4">
+            @{
+                int imagesPerRow = 6; // number of images per row
+                var pcs = Model.ListPCs.ToList(); // already sorted by category
+                int i = 0;
+            }
+
+            <div class="container">
+                @while (i < pcs.Count)
+                {
+                    // Take the next row of images (up to imagesPerRow)
+                    var rowImages = pcs.Skip(i).Take(imagesPerRow).ToList();
+
+                    <div class="row mb-4 align-items-start">
+                        @{
+                            // Split row by consecutive category chunks
+                            var categoryChunks = new List<List<dynamic>>();
+                            var currentCategory = rowImages[0].category;
+                            var chunk = new List<dynamic>();
+
+                            foreach (var image in rowImages)
+                            {
+                                if (image.category == currentCategory)
+                                {
+                                    chunk.Add(image);
+                                }
+                                else
+                                {
+                                    categoryChunks.Add(chunk);
+                                    chunk = new List<dynamic> { image };
+                                    currentCategory = image.category;
+                                }
+                            }
+                            categoryChunks.Add(chunk); // add the last chunk
+                        }
+
+                        @foreach (var catChunk in categoryChunks)
+                        {
+                            var colCount = catChunk.Count * 2; // col-md-2 per image
+                            if (colCount > 12) colCount = 12;
+
+                            <div class="col-auto mb-2">
+                                <div class="category-bar d-inline-block">
+                                    <strong>@catChunk[0].category</strong>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="row mb-4">
+                        @foreach (var image in rowImages)
+                        {
+                            string selectedValue = "";
+                            @if (@Model.UploadedWL.TopPriority.Contains(image.Name))
+                                selectedValue = "P";
+                            else if(@Model.UploadedWL.Want.Contains(image.Name))
+                                selectedValue = "W";
+                            else if(@Model.UploadedWL.Have.Contains(image.Name))
+                                selectedValue = "H";
+
+                            var imageName = image.Name.Replace("KHJ", "") + ".png";
+                            var imagePath = Url.Content($"~/ImagesATEEZ/KHJ/{imageName}");
+
+                            <div class="col-md-2 text-center mb-4">
+                                <img src="@imagePath" alt="@image" class="img-fluid mb-2" />
+                                <select name="@image" class="form-select">
+                                    <option value="" selected="@(selectedValue == "" ? "selected" : null)">-- Select --</option>
+                                    <option value="I" selected="@(selectedValue == "I" ? "selected" : null)">Indifferent</option>
+                                    <option value="H" selected="@(selectedValue == "H" ? "selected" : null)">I have it</option>
+                                    <option value="W" selected="@(selectedValue == "W" ? "selected" : null)">I want it</option>
+                                    <option value="P" selected="@(selectedValue == "P" ? "selected" : null)">Top priority</option>
+                                </select>
+                            </div>
+                        }
+                    </div>
+
+                    i += rowImages.Count;
+                }
+            }
+
+                </div>
+            }
+        </div>
+    }
+}
+
+
+
+
+<br>
+<br>
+  <div class="col-md-12">
+        <button type="submit" class="btn btn-light btn-lg btn-block">Save</button>
+  </div>
+</form>
+
+
+
+
+
+<!-- Bouton -->
+<a href="#top" id="backToTop" class="btn btn-primary">↑ Haut</a>
+
+<style>
+    #backToTop {
+        position: fixed;
+        bottom: 20px;   /* distance du bas */
+        right: 20px;    /* distance de la droite */
+        z-index: 1000;  /* reste au-dessus du contenu */
+        display: none;  /* caché par défaut */
+        border-radius: 50%;
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+</style>
+
+<script>
+    // Affiche / cache le bouton en fonction du scroll
+    window.addEventListener("scroll", function () {
+        const btn = document.getElementById("backToTop");
+        if (window.scrollY > 300) { // apparaît après 300px
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    });
+
+    // Scroll fluide quand on clique
+    document.getElementById("backToTop").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>

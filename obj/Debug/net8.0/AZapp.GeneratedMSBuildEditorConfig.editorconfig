@@ -1,0 +1,115 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AZapp
+build_property.RootNamespace = AZapp
+build_property.ProjectDir = /home/asus/VisualStudioScripts/AZApp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/asus/VisualStudioScripts/AZApp
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Home/Explication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FeHBsaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Home/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9VcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/CJH.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0NKSC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/CSN.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0NTTi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/CSNv1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0NTTnYxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/JWY.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0pXWS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/JYH.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0pZSC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/KHJ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0tISi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/KHJ_1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0tISl8xLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/KHJ_2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0tISl8yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/KYS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0tZUy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/PSH.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL1BTSC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Member/SMG.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL1NNRy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/asus/VisualStudioScripts/AZApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fsp1mhv86y

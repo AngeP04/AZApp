@@ -1,0 +1,177 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+.custom-file-upload {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-file-upload input[type="file"] {
+    opacity: 0;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.custom-file-upload label {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.custom-file-upload label:hover {
+    background-color: #0056b3;
+}
+
+
+
+    .album-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    /* Chaque image + sa barre forment une cellule */
+    .image-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-bar {
+        color: #000;
+        font-weight: bold;
+        padding: 3px 5px;
+        font-size: 0.9em;
+        margin-bottom: 5px;
+        width: 110%;
+        height: 25px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .image-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .pretty-link {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+   
+
+    .profil {
+    display: flex;
+    align-items: center;   /* aligne verticalement l'image et le texte */
+    gap: 20px;             /* espace entre image et titre */
+    flex-wrap: wrap;          
+    }
+
+    .titre {
+    font-size: clamp(50px, 5vw, 100px); /* taille adaptative : min 24px, max 48px */
+    margin: 0;
+    color: #ffffff;
+    }
+
+    .text-content {
+    flex: 1;
+    min-width: 0;
+    max-width: 600px;
+}
+
+    .profile {
+    display: flex;             /* aligns image and text side by side */
+    align-items: flex-start;   /* top-aligns text with image */
+    gap: 20px;                 /* space between image and text */
+}
+
+.circle {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;        /* makes the image circular */
+    flex-shrink: 0;            /* prevents the image from shrinking */
+}
+
+.text-content {
+    flex: 1;                   /* lets the text take remaining space */
+    min-width: 0;              /* allows text to wrap properly within flex */
+}
+
+.title {
+    font-size: clamp(28px, 4vw, 48px);
+    margin: 0 0 10px 0;
+}
+
+.description {
+    font-size: 18px;
+    margin: 0;
+}
+
+   .liste-colorée {
+    background-color: white;   /* couleur du carré */
+    padding: 15px 25px;        /* espace autour du texte */
+    border-radius: 8px;        /* coins arrondis */
+    display: inline-block;      /* permet de centrer le bloc */
+    text-align: center;         /* centre le contenu */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optionnel : léger effet de profondeur */
+}
+
+.liste-colorée ul {
+    list-style: none;   /* supprime les puces */
+    padding: 0;
+    margin: 0;
+}
+
+.liste-colorée .col-auto {
+    padding-left: 10px;  /* réduit l'espace entre les colonnes */
+    padding-right: 10px;
+}
+
+.profile {
+    display: flex;             /* aligns image and text side by side */
+    align-items: flex-start;   /* top-aligns text with image */
+    gap: 20px;                 /* space between image and text */
+}

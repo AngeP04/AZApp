@@ -1,0 +1,188 @@
+@using Microsoft.AspNetCore.Mvc
+@using Microsoft.AspNetCore.Mvc.Razor
+@model ModelView
+
+<style>
+    body {background-color: #feae69}
+    .pretty-link:hover {
+        color: #dd7155;
+    }
+    .album-title {
+        margin-top: 40px;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        width: 100%;
+        background-color: #dd7155;
+        color: #ffffff;
+    }
+     .cercle {
+    width: 280px;       /* taille de l’image */
+    height: 280px;
+    object-fit: cover;  /* recadre l’image sans la déformer */
+    border-radius: 50%; /* arrondit pour former un cercle */
+    border: 8px solid #dd7155;
+    }
+</style>
+
+
+
+<div class="profile">
+    <img src="@Url.Content("~/Avatar/KHJ.png")" alt="Profile Picture" class="cercle">
+    <div class="text-content">
+        <h2 class="title">Kim Hongjoong</h2>
+        <p class="description">
+            Here is the list of PCs of Kim Hongloong, our captain. He's born November the 7th 1998, in Anyang, South Korea.
+            He's the leader of Ateez but also main rapper, singer and composer. 
+            His Aniteez is a squirrel named Jjoongrami. Hongjoong has been the global brand ambassador of the renowned 
+            French fashion brand Balmain since September 5th, 2023.
+        </p>
+    </div>
+</div>
+
+
+<br>
+
+<!-- Sommaire -->
+@{
+    // On prépare les groupes
+    var groups = Model.ListPCs.GroupBy(pc => pc.album).ToList();
+}
+<div class="d-flex justify-content-center">
+    <div class="liste-colorée mb-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <ul>
+                    @foreach (var group in groups.Take(groups.Count / 2))
+                    {
+                        var safeId = group.Key.Replace(" ", "_");
+                        <li><a href="#@safeId" class="pretty-link">@group.Key</a></li>
+                    }
+                </ul>
+            </div>
+            <div class="col-auto">
+                <ul>
+                    @foreach (var group in groups.Skip(groups.Count / 2))
+                    {
+                        var safeId = group.Key.Replace(" ", "_");
+                        <li><a href="#@safeId" class="pretty-link">@group.Key</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<form asp-controller="member" asp-action="recupererValeursKHJ" method="post">
+
+@* Grouper les images par album, puis par catégorie *@
+@foreach (var albumGroup in Model.ListPCs.OrderBy(i => i.album).GroupBy(i => i.album))
+{
+    <div class="album">
+        @* <div class="album-title">@albumGroup.Key</div> *@
+        <h3 id="@albumGroup.Key.Replace(" ", "_")" class="album-title">@albumGroup.Key</h3>
+    </div>
+
+    <div class="album-grid">
+        @{
+            string? currentKey = null;
+            int indexInGroup = 0;
+        }
+        @foreach (var img in albumGroup.OrderBy(i => i.category).ThenBy(i => i.publisher))
+        {
+            // Définir la clé de regroupement : categorie OU categorie+publisher si c'est "B"
+            string groupKey = img.category == "POBs" || img.category == "POBs Japonais" ? img.publisher : img.category;
+
+            if (groupKey != currentKey)
+            {
+                currentKey = groupKey;
+                indexInGroup = 0;
+            }
+
+            var color = Model.Color.ContainsKey(groupKey) 
+            ? Model.Color[groupKey] 
+            : "#ccc"; // couleur par défaut si non défini
+            string selectedValue = "";
+            @if (@Model.UploadedWL.TopPriority.Contains(img.Name))
+                selectedValue = "P";
+            else if(@Model.UploadedWL.Want.Contains(img.Name))
+                selectedValue = "W";
+            else if(@Model.UploadedWL.Have.Contains(img.Name))
+                selectedValue = "H";
+
+            <div class="image-wrapper">
+                <div class="category-bar" style="background-color:@color">
+                    @(indexInGroup == 0 ? groupKey : "")
+                </div>
+
+                
+                <div class="image-container">
+                    <img src="@Url.Content($"~/ImagesATEEZ/KHJ/{img.Name.Replace("KHJ", "")}" + ".png")" alt="@img"/>
+                    <select name="@img" class="form-select">
+                        <option value="" selected="@(selectedValue == "" ? "selected" : null)">-- Select --</option>
+                        <option value="I" selected="@(selectedValue == "I" ? "selected" : null)">Indifferent</option>
+                        <option value="H" selected="@(selectedValue == "H" ? "selected" : null)">I have it</option>
+                        <option value="W" selected="@(selectedValue == "W" ? "selected" : null)">I want it</option>
+                        <option value="P" selected="@(selectedValue == "P" ? "selected" : null)">Top priority</option>
+                    </select>
+                </div>
+            </div>
+
+            indexInGroup++;
+        }
+    </div>
+}
+
+
+
+
+
+<br>
+<br>
+  <div class="col-md-12">
+        <button type="submit" class="btn btn-light btn-lg btn-block">Save</button>
+  </div>
+</form>
+
+
+
+
+
+<!-- Bouton -->
+<a href="#top" id="backToTop" class="btn btn-primary">↑ Haut</a>
+
+<style>
+    #backToTop {
+        position: fixed;
+        bottom: 20px;   /* distance du bas */
+        right: 20px;    /* distance de la droite */
+        z-index: 1000;  /* reste au-dessus du contenu */
+        display: none;  /* caché par défaut */
+        border-radius: 50%;
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+</style>
+
+<script>
+    // Affiche / cache le bouton en fonction du scroll
+    window.addEventListener("scroll", function () {
+        const btn = document.getElementById("backToTop");
+        if (window.scrollY > 300) { // apparaît après 300px
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    });
+
+    // Scroll fluide quand on clique
+    document.getElementById("backToTop").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>

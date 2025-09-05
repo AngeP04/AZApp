@@ -1,0 +1,54 @@
+@* @model List<PCs> *@
+
+<div class="text-center">
+    <p>You will now be able to create your wishlist of PC of ATEEZ members. Choose a member:</p>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="d-grid gap-2 col-3 mx-auto"><a asp-controller="member" asp-action="KHJ" type="submit" class="btn btn-light btn-lg btn-block" role="button" aria-pressed="true">Hongjoong</a></div>
+    <div class="d-grid gap-2 col-3 mx-auto"><a asp-controller="member" asp-action="PSH" type="submit" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Seonghwa</a></div>
+    <div class="d-grid gap-2 col-3 mx-auto"><a asp-controller="member" asp-action="JYH" type="submit" class="btn btn-info btn-lg btn-block" role="button" aria-pressed="true">Yunho</a></div>
+    <div class="d-grid gap-2 col-3 mx-auto"><a asp-controller="member" asp-action="KYS" type="submit" class="btn btn-danger btn-lg btn-block" role="button" aria-pressed="true">Yeosang</a></div>
+  </div>
+</div>
+
+<br>
+<br> 
+
+<div class="container">
+  <div class="row">
+    <div class="d-grid gap-2 col-3 mx-auto"><a asp-controller="member" asp-action="CSN" type="submit" class="btn btn-warning btn-lg btn-block" role="button" aria-pressed="true">San</a></div>
+    <div class="d-grid gap-2 col-3 mx-auto"><a asp-controller="member" asp-action="SMG" type="submit" class="btn btn-secondary btn-lg btn-block" role="button" aria-pressed="true">Mingi</a></div>
+    <div class="d-grid gap-2 col-3 mx-auto"><a asp-controller="member" asp-action="JWY" type="submit" class="btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">Wooyoung</a></div>
+    <div class="d-grid gap-2 col-3 mx-auto"><a asp-controller="member" asp-action="CJH" type="submit" class="btn btn-success btn-lg btn-block" role="button" aria-pressed="true">Jongho</a></div>
+  </div>
+</div>
+
+<br>
+<br>
+<a asp-controller="member" asp-action="Telecharger" class="btn btn-dark btn-lg btn-block">Download the pdf</legend></a>
+@* 
+<h1>Liste des PCs</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Album</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.id</td>
+                <td>@u.Name</td>
+                <td>@u.album</td>
+            </tr>
+        }
+    </tbody>
+</table> *@
