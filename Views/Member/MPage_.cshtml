@@ -1,0 +1,12 @@
+@model ModelView
+
+@{
+    ViewData["Title"] = "Page Membre";
+}
+
+<h1>Valeur reçue : @Model.member</h1>
+
+@foreach(var item in @Model.ListPCs)
+{
+    <p> @item.Name </p>
+}

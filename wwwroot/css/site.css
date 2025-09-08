@@ -9,7 +9,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem rgb(255, 255, 255), 0 0 0 0.25rem #269bfa;
 }
 
 html {
@@ -136,8 +136,28 @@ body {
 }
 
 .text-content {
-    flex: 1;                   /* lets the text take remaining space */
-    min-width: 0;              /* allows text to wrap properly within flex */
+    flex: 1 1 auto;          /* prend tout l'espace restant */
+    min-width: 0;            /* essentiel pour que le texte se réduise correctement */
+    word-wrap: break-word;
+    padding-left: 20px;      /* espace entre image et texte */
+}
+
+
+.profil-container {
+    display: flex;           /* image et texte côte à côte */
+    flex-wrap: wrap;         /* pour que ça se replie sur petit écran */
+    width: 100%;             /* prend toute la largeur */
+    max-width: 100vw;        /* aucune limite de largeur */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-fluid {
+    width: 100%;         /* l'image prend toute la largeur de sa colonne */
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;  /* rend l'image circulaire */
 }
 
 .title {
@@ -170,8 +190,61 @@ body {
     padding-right: 10px;
 }
 
-.profile {
+.profil {
     display: flex;             /* aligns image and text side by side */
     align-items: flex-start;   /* top-aligns text with image */
     gap: 20px;                 /* space between image and text */
+    width: 100%;  
+    margin: 0;        /* supprime margin si nécessaire */
+    padding: 0;       /* supprime padding si nécessaire */
+}
+
+.btn-personnalise:hover {
+    background-color: #fff; /* couleur plus foncée au survol */
+    transform: translateY(-2px); /* léger déplacement vers le haut */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.btn-wrapper {
+    text-align: center; /* centre le bouton horizontalement */
+}
+
+.btn-fixe {
+    position: fixed;
+    bottom: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;               /* caché par défaut */
+    transition: opacity 0.3s;
+}
+
+/* Position des deux boutons */
+#btn1 {
+    left: 20px;
+}
+
+#btn2 {
+    right: 20px;
+}
+
+/* Classe pour rendre visible */
+.btn-fixe.show {
+    opacity: 1;
+}
+
+.text-img {
+    background-color: white;   /* couleur du carré */
+    opacity: 0.5;
+    padding: 10px 15px;        /* espace autour du texte */
+    border-radius: 8px;        /* coins arrondis */
+    display: inline-block;      /* permet de centrer le bloc */
+    text-align: center;         /* centre le contenu */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optionnel : léger effet de profondeur */
+    text-align: center;   
+    font-size: 24px;
 }

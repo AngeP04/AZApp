@@ -21293,6 +21293,10 @@
       "PackagePath": "staticwebassets/ImagesATEEZ/SMG/ZeroFeverEpilogueZLimited.png"
     },
     {
+      "Id": "/home/asus/VisualStudioScripts/AZApp/wwwroot/ImagesATEEZ/sleepingAniteez.jpg",
+      "PackagePath": "staticwebassets/ImagesATEEZ/sleepingAniteez.jpg"
+    },
+    {
       "Id": "/home/asus/VisualStudioScripts/AZApp/wwwroot/UploadedFiles/WishListData.txt",
       "PackagePath": "staticwebassets/UploadedFiles/WishListData.txt"
     },

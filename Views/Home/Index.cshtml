@@ -1,15 +1,31 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Here is a site to create your wishlist ATEEZ. If you think our database is incomplete, send a message to our contact info.</p>
+<style>
+    body {
+        background-image: url('/ImagesATEEZ/sleepingAniteez.jpg'); /* chemin depuis wwwroot */
+        background-size: cover;       /* couvre toute la page */
+        background-position: center;  /* centrée */
+        background-repeat: no-repeat; /* pas de répétition */
+        background-attachment: fixed; /* l’image reste fixe au scroll */
+    }
+    .pretty-link:hover {
+        color: #007bff;
+</style>
+
+
+
+<div class="btn-wrapper">
+    <div class="text-center text-img">
+        <h1 class="display-4">Welcome</h1>
+        <p>Here is a site to create your wishlist ATEEZ. If you think our database is incomplete, send a message to our contact info.</p>
+    </div>
 </div>
 
 <br>
-<div class="text-center">
-    <p>You can see how this site works <a asp-controller="home" asp-action="Explication">here</a>.</p>
-    <p>You can create your wishlist <a asp-controller="member" asp-action="Create">here</a>.</p>
-    <p>You can update your wishlist<a asp-controller="home" asp-action="Update">here</a>.</p>
+<div class="btn-wrapper">
+    <div class="text-center text-img">
+        <p>You can see how this site works <a class="pretty-link" asp-controller="home" asp-action="Explication">here</a>.</p>
+        <p>You can create your wishlist <a class="pretty-link" asp-controller="member" asp-action="Create">here</a>.</p>
+        <p>You can update your wishlist<a class="pretty-link" asp-controller="home" asp-action="Update">here</a>.</p>
+    </div>
 </div>

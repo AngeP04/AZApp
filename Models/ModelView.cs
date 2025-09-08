@@ -2,10 +2,12 @@ using AZapp;
 
 public class ModelView
 {
+    public string member { get; set; }
     public List<List<string>> ListPCMember = new List<List<string>>();
     public List<PCs> ListPCs = new List<PCs>();
     public WishList UploadedWL = new WishList();
     public Dictionary<string, string> Color = new Dictionary<string, string>();
+    public Dictionary<string, string> IntroPage = new Dictionary<string, string>();
 
     public ModelView()
     {
@@ -56,17 +58,34 @@ public class ModelView
         Color.Add("PSH-fond", "#f9d4e5");
         Color.Add("PSH-tour", "#f484b6");
         Color.Add("JYH-fond", "#ffecc1");
-        Color.Add("JYH-tour", "#fccf98");
+        Color.Add("JYH-tour", "#e4b57cff");
         Color.Add("KYS-fond", "#fefef2");
-        Color.Add("KYS-tour", "#f6d9c7");
+        Color.Add("KYS-tour", "#e0c3b0ff");
         Color.Add("CSN-fond", "#d6c5e5");
-        Color.Add("CSN-tour", "#9c91d3");
+        Color.Add("CSN-tour", "#8479b8ff");
         Color.Add("SMG-fond", "#fff78a");
-        Color.Add("SMG-tour", "#fdcd4f");
-        Color.Add("JWY-fond", "#424244");
+        Color.Add("SMG-tour", "#f1c24aff");
+        Color.Add("JWY-fond", "#5f5f61ff");
         Color.Add("JWY-tour", "#322c2c");
         Color.Add("CJH-fond", "#d78766");
-        Color.Add("CJH-tour", "#a15d46");
+        Color.Add("CJH-tour", "#8f513dff");
+
+        IntroPage.Add("KHJ-name", "Kim Hongjoong");
+        IntroPage.Add("KHJ-prg", "Here is the list of PCs of Kim Hongloong, our captain. He's born November the 7th 1998, in Anyang, South Korea. He's the leader of Ateez but also main rapper, singer and composer. His Aniteez is a squirrel named Jjoongrami. Hongjoong has been the global brand ambassador of the renowned French fashion brand Balmain since September 5th, 2023.");
+        IntroPage.Add("PSH-name", "Park Seonghwa");
+        IntroPage.Add("PSH-prg", "Here is the list of PCs of Park Seonghwa");
+        IntroPage.Add("JYH-name", "Jeong Yunho");
+        IntroPage.Add("JYH-prg", "Here is the list of PCs of Jeong Yunho");
+        IntroPage.Add("KYS-name", "Kang Yeosang");
+        IntroPage.Add("KYS-prg", "Here is the list of PCs of Kang Yeosang");
+        IntroPage.Add("CSN-name", "Choi San");
+        IntroPage.Add("CSN-prg", "Here is the list of PCs of Choi San");
+        IntroPage.Add("SMG-name", "Song Mingi");
+        IntroPage.Add("SMG-prg", "Here is the list of PCs of Song Mingi");
+        IntroPage.Add("JWY-name", "Jung Wooyoung");
+        IntroPage.Add("JWY-prg", "Here is the list of PCs of Jung Wooyoung");
+        IntroPage.Add("CJH-name", "Choi Jongho");
+        IntroPage.Add("CJH-prg", "Here is the list of PCs of Choi Jongho");
     }
 
 }

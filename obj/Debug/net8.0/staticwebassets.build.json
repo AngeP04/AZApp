@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VDu6DB+VJ7sdW43OM8lIheUZfxF4Q7wx2cuMItTwWI4=",
+  "Hash": "f3/PHQU8YKNjLOcBi2aO2+YyFbDcJb+Zi5Hymv9E/n0=",
   "Source": "AZapp",
   "BasePath": "_content/AZapp",
   "Mode": "Default",
@@ -96497,6 +96497,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/ImagesATEEZ/PSH/ZeroFeverEpilogueZLimited.png"
+    },
+    {
+      "Identity": "/home/asus/VisualStudioScripts/AZApp/wwwroot/ImagesATEEZ/sleepingAniteez.jpg",
+      "SourceId": "AZapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/asus/VisualStudioScripts/AZApp/wwwroot/",
+      "BasePath": "_content/AZapp",
+      "RelativePath": "ImagesATEEZ/sleepingAniteez.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/ImagesATEEZ/sleepingAniteez.jpg"
     },
     {
       "Identity": "/home/asus/VisualStudioScripts/AZApp/wwwroot/ImagesATEEZ/SMG/1stAnnivAdult.png",

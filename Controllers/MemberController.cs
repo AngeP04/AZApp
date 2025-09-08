@@ -26,7 +26,8 @@ public class MemberController : Controller
     [HttpGet]
     public IActionResult Create()
     {
-        return View();
+        var mview = new ModelView();
+        return View(mview);
     }
 
     [HttpPost]
@@ -62,233 +63,51 @@ public class MemberController : Controller
         return RedirectToAction("Create");
     }
 
-
-    public IActionResult KHJ()
+    public IActionResult MPage_(string valeur)
     {
-        ModelView khj = new ModelView();
-        khj.ListPCs =  _pcservice.GetAllPCs("KHJ");
+        var model = new ModelView
+        {
+            member = valeur,
+            ListPCs = _pcservice.GetAllPCs(valeur)
+        };
+
+        return View(model);
+    }
+
+
+    public IActionResult MPage(string value)
+    {
+        ModelView view = new ModelView();
+        view.member = value;
+        view.ListPCs = _pcservice.GetAllPCs(value);
         foreach (string nom in _model.TopPriority)
         {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "KHJ")
+            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == value)
             {
-                khj.UploadedWL.TopPriority.Add(nom);
+                view.UploadedWL.TopPriority.Add(nom);
             }
         }
         foreach (string nom in _model.Want)
         {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "KHJ")
+            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == value)
             {
-                khj.UploadedWL.Want.Add(nom);
+                view.UploadedWL.Want.Add(nom);
             }
         }
         foreach (string nom in _model.Have)
         {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "KHJ")
+            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == value)
             {
-                khj.UploadedWL.Have.Add(nom);
+                view.UploadedWL.Have.Add(nom);
             }
         }
-        return View(khj);
+        return View(view);
     }
 
-    public IActionResult PSH()
-    {
-        ModelView psh = new ModelView();
-        psh.ListPCMember = listPC.PSH;
-        foreach (string nom in _model.TopPriority)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "PSH")
-            {
-                psh.UploadedWL.TopPriority.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Want)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "PSH")
-            {
-                psh.UploadedWL.Want.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Have)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "PSH")
-            {
-                psh.UploadedWL.Have.Add(nom);
-            }
-        }
-        return View(psh);
-    }
 
-    public IActionResult JYH()
-    {
-        ModelView jyh = new ModelView();
-        jyh.ListPCMember = listPC.JYH;
-        foreach (string nom in _model.TopPriority)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "JYH")
-            {
-                jyh.UploadedWL.TopPriority.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Want)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "JYH")
-            {
-                jyh.UploadedWL.Want.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Have)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "JYH")
-            {
-                jyh.UploadedWL.Have.Add(nom);
-            }
-        }
-        return View(jyh);
-    }
-
-    public IActionResult KYS()
-    {
-        ModelView kys = new ModelView();
-        kys.ListPCMember = listPC.KYS;
-        foreach (string nom in _model.TopPriority)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "KYS")
-            {
-                kys.UploadedWL.TopPriority.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Want)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "KYS")
-            {
-                kys.UploadedWL.Want.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Have)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "KYS")
-            {
-                kys.UploadedWL.Have.Add(nom);
-            }
-        }
-        return View(kys);
-    }
-
-    public IActionResult CSN()
-    {
-        ModelView csn = new ModelView();
-        csn.ListPCMember = listPC.CSN;
-        foreach (string nom in _model.TopPriority)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "CSN")
-            {
-                csn.UploadedWL.TopPriority.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Want)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "CSN")
-            {
-                csn.UploadedWL.Want.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Have)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "CSN")
-            {
-                csn.UploadedWL.Have.Add(nom);
-            }
-        }
-        return View(csn);
-    }
-
-    public IActionResult SMG()
-    {
-        ModelView smg = new ModelView();
-        smg.ListPCMember = listPC.SMG;
-        foreach (string nom in _model.TopPriority)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "SMG")
-            {
-                smg.UploadedWL.TopPriority.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Want)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "SMG")
-            {
-                smg.UploadedWL.Want.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Have)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "SMG")
-            {
-                smg.UploadedWL.Have.Add(nom);
-            }
-        }
-        return View(smg);
-    }
-
-    public IActionResult JWY()
-    {
-        ModelView jwy = new ModelView();
-        jwy.ListPCMember = listPC.JWY;
-        foreach (string nom in _model.TopPriority)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "JWY")
-            {
-                jwy.UploadedWL.TopPriority.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Want)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "JWY")
-            {
-                jwy.UploadedWL.Want.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Have)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "JWY")
-            {
-                jwy.UploadedWL.Have.Add(nom);
-            }
-        }
-        return View(jwy);
-    }
-
-    public IActionResult CJH()
-    {
-        ModelView cjh = new ModelView();
-        cjh.ListPCMember = listPC.CJH;
-        foreach (string nom in _model.TopPriority)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "CJH")
-            {
-                cjh.UploadedWL.TopPriority.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Want)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "CJH")
-            {
-                cjh.UploadedWL.Want.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Have)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == "CJH")
-            {
-                cjh.UploadedWL.Have.Add(nom);
-            }
-        }
-        return View(cjh);
-    }
 
     [HttpPost]
-    public IActionResult recupererValeursKHJ()
+    public IActionResult recupererValeurs(string member)
     {
         var allnames = listPC.KHJ;
         foreach (List<string> liste in allnames)
