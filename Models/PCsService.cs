@@ -19,10 +19,7 @@ namespace AZapp.Models
         public List<PCs> GetAllPCs(string member)
         {
             var items = context.PCs.ToList();
-            foreach (var item in items)
-            {
-                item.Name += member;
-            }
+            
             var absent = items.FindAll(item => item.absentmember.Split(";").Contains(member));
             
             foreach (var item in absent)

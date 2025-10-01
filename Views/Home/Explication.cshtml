@@ -1,16 +1,37 @@
-This is how this site works:
 
-<ul>
-    <li>You go to <a asp-controller="member" asp-action="Create">Create my wishlist</a></li>
-    <li>You choose which member PCs you want to look at.</li>
-    <li>Under each PC picture you choose either if you already have it, if you want it or if you want it on your top priority list.</li>
-    <li>Don't forget to save at the end of the page. It will return you to the page where you can choose another member top look at.</li>
-    <li>When you have selected all the PCs you want on your wishlist, you click on Download the pdf. It will in fact download a .zip file, 
-        which contains a pdf with the pictures of the PCs in each category that you can use on your social medias, and a .txt file.</li>
-    <li>The .txt file is used in the <a asp-controller="member" asp-action="Update">Update</a> part of this site. You upload this file on
-        the page and submit it. Then you will be lead to the same page as when you want to create your wishlist, except the choices you made 
-        last time are saved up.</li>
-    <li>If you have any question don't hesitate to contact <a asp-controller="member" asp-action="Contact">me</a>.</li>
-</ul>
+<style>
+    body {
+        background-image: url('/ImagesATEEZ/sleepingAniteez.jpg'); /* chemin depuis wwwroot */
+        background-size: cover;       /* couvre toute la page */
+        background-position: center;  /* centrée */
+        background-repeat: no-repeat; /* pas de répétition */
+        background-attachment: fixed; /* l’image reste fixe au scroll */
+    }
+    .pretty-link:hover {
+        color: #007bff;
+    }
+</style>
 
-You have to know that the PCs that features 2 members or more are shown on each member page, so you can choose them twice body accident.
+<div class="btn-wrapper">
+    <div class="text-img">
+        <h1> This is how this site works: </h1>
+   </div>
+</div>
+<br>
+<br>
+<div class="text-img">
+    <ul>
+        <li>You go to <a class="pretty-link" asp-controller="member" asp-action="Create">Create my wishlist</a></li>
+        <li>You choose which member PCs you want to look at.</li>
+        <li>Under each PC picture you choose either if you already have it, if you want it or if you want it on your top priority list.</li>
+        <li>Don't forget to save at the end of the page. It will return you to the page where you can choose another member top look at.</li>
+        <li>When you have selected all the PCs you want on your wishlist, you click on Download the pdf. It will in fact download a .zip file, 
+            which contains a pdf with the pictures of the PCs in each category that you can use on your social medias, and a .txt file.</li>
+        <li>The .txt file is used in the <a class="pretty-link" asp-controller="member" asp-action="Update">Update</a> part of this site. You upload this file on
+            the page and submit it. Then you will be lead to the same page as when you want to create your wishlist, except the choices you made 
+            last time are saved up.</li>
+        <li>If you have any question don't hesitate to contact <a class="pretty-link" asp-controller="member" asp-action="Contact">me</a>.</li>
+    </ul>
+
+    You have to know that the PCs that features 2 members or more are shown on each member page, so you can choose them twice body accident.
+</div>

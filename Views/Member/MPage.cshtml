@@ -52,6 +52,10 @@
 
 
 
+<form asp-action="recupererValeurs" asp-controller="Member" method="post">
+    @Html.AntiForgeryToken()
+
+
 <div class="container-fluid">
     <div class="row align-items-start">
         <!-- Image sur 2 colonnes -->
@@ -71,28 +75,22 @@
 <br>
 
 <!-- Sommaire -->
-@{
-    // On prépare les groupes
-    var groups = Model.ListPCs.GroupBy(pc => pc.album).ToList();
-}
 <div class="d-flex justify-content-center">
     <div class="liste-colorée mb-5 text-center">
         <div class="row justify-content-center">
             <div class="col-auto">
                 <ul>
-                    @foreach (var group in groups.Take(groups.Count / 2))
+                    @for(int j=0; j<Model.Albums.Count/2; j++)
                     {
-                        var safeId = group.Key.Replace(" ", "_");
-                        <li><a href="#@safeId" class="pretty-link">@group.Key</a></li>
+                        <li><a href="#album-@Model.Albums[j]" class="pretty-link">@Model.Albums[j]</a></li>
                     }
                 </ul>
             </div>
             <div class="col-auto">
                 <ul>
-                    @foreach (var group in groups.Skip(groups.Count / 2))
+                    @for(int j=Model.Albums.Count/2; j<Model.Albums.Count; j++)
                     {
-                        var safeId = group.Key.Replace(" ", "_");
-                        <li><a href="#@safeId" class="pretty-link">@group.Key</a></li>
+                        <li><a href="#album-@Model.Albums[j]" class="pretty-link">@Model.Albums[j]</a></li>
                     }
                 </ul>
             </div>
@@ -102,76 +100,70 @@
 
 
 
-<form asp-controller="member" asp-action="recupererValeurs" asp-route-valeur="@member" method="post">
 
-@* Grouper les images par album, puis par catégorie *@
-@foreach (var albumGroup in Model.ListPCs.OrderBy(i => i.album).GroupBy(i => i.album))
-{
-    <div class="album">
-        @* <div class="album-title">@albumGroup.Key</div> *@
-        <h3 id="@albumGroup.Key.Replace(" ", "_")" class="album-title">@albumGroup.Key</h3>
-    </div>
 
-    <div class="album-grid">
-        @{
-            string? currentKey = null;
-            int indexInGroup = 0;
-        }
-        @foreach (var img in albumGroup.OrderBy(i => i.category).ThenBy(i => i.publisher))
-        {
-            // Définir la clé de regroupement : categorie OU categorie+publisher si c'est "B"
-            string groupKey = img.category == "POBs" || img.category == "POBs Japonais" ? img.publisher : img.category;
 
-            if (groupKey != currentKey)
-            {
-                currentKey = groupKey;
-                indexInGroup = 0;
+
+
+    @for(int j=0; j<Model.Albums.Count; j++)
+    {
+        var album = Model.Questions.Where(q => q.pc.album == Model.Albums[j]).OrderBy(q => q.pc.category).ThenBy(q => q.pc.publisher).ToList();
+
+        <div class="album">
+            <h3 id="@album[0].pc.album" class="album-title">@album[0].pc.album</h3>
+        </div>
+
+        <div class="album-grid" id="album-@album[0].pc.album">
+            @{
+                string? currentKey = null;
+                int indexInGroup = 0;
             }
 
-            var color = Model.Color.ContainsKey(groupKey) 
-            ? Model.Color[groupKey] 
-            : "#ccc"; // couleur par défaut si non défini
-            string selectedValue = "";
-            @if (@Model.UploadedWL.TopPriority.Contains(img.Name))
-                selectedValue = "P";
-            else if(@Model.UploadedWL.Want.Contains(img.Name))
-                selectedValue = "W";
-            else if(@Model.UploadedWL.Have.Contains(img.Name))
-                selectedValue = "H";
+            @for (int i = 0; i < album.Count(); i++)
+            {
+                string groupKey = album[i].pc.category == "Merch" || album[i].pc.category == "POBs" || album[i].pc.category == "POBs Japonais" ? album[i].pc.publisher : album[i].pc.category;
 
-            <div class="image-wrapper">
-                <div class="category-bar" style="background-color:@color">
-                    @(indexInGroup == 0 ? groupKey : "")
-                </div>
+                if (groupKey != currentKey)
+                {
+                    currentKey = groupKey;
+                    indexInGroup = 0;
+                }
 
-                
-                <div class="image-container">
-                    <img src="@Url.Content($"~/ImagesATEEZ/{member}/{img.Name.Replace(member, "")}" + ".png")" alt="@img"/>
-                    <select name="@img" class="form-select">
-                        <option value="" selected="@(selectedValue == "" ? "selected" : null)">-- Select --</option>
-                        <option value="I" selected="@(selectedValue == "I" ? "selected" : null)">Indifferent</option>
-                        <option value="H" selected="@(selectedValue == "H" ? "selected" : null)">I have it</option>
-                        <option value="W" selected="@(selectedValue == "W" ? "selected" : null)">I want it</option>
-                        <option value="P" selected="@(selectedValue == "P" ? "selected" : null)">Top priority</option>
+                var color = Model.Color.ContainsKey(groupKey) ? Model.Color[groupKey] : "#ccc";
+
+
+                <div class="image-wrapper">
+                    <div class="category-bar" style="background-color:@color">
+                        @(indexInGroup == 0 ? groupKey : "")
+                    </div>
+
+                    <img src="@Url.Content($"~/ImagesATEEZ/{Model.Questions[i].Name}.png")"
+                        alt="@Model.Questions[i].Name"
+                        style="width:140px;height:auto;" />
+
+                    <input type="hidden" name="Questions[@i].Name" value="@Model.Questions[i].Name" />
+
+                    <select name="Questions[@i].Selection" class="form-select">
+                        <option value="I" selected="@(Model.Questions[i].Selection == "I" ? "selected" : null)">Indifferent</option>
+                        <option value="H" selected="@(Model.Questions[i].Selection == "H" ? "selected" : null)">I have it</option>
+                        <option value="W" selected="@(Model.Questions[i].Selection == "W" ? "selected" : null)">I want it</option>
+                        <option value="P" selected="@(Model.Questions[i].Selection == "P" ? "selected" : null)">Top priority</option>
                     </select>
                 </div>
-            </div>
 
-            indexInGroup++;
-        }
-    </div>
-}
-
+                indexInGroup++;
+            }
+        </div>
+    }
 
 
-
-
-<br>
-<br>
-  <div class="btn-wrapper">
+    <br>
+    <br>
+    <div class="btn-wrapper">
         <button type="submit" class="btn-personnalise">Save</button>
-  </div>
+    </div>
 </form>
+
 <footer id="footer">
     <p>...</p>
 </footer>

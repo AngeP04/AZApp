@@ -28,9 +28,9 @@ public class WishList
     {
         var basePath = "wwwroot/ImagesATEEZ/";
         WishList paths = new WishList();
-        paths.TopPriority = TopPriority.Select(name => Path.Combine(basePath, name.Substring(name.Count() - 3, 3), name.Substring(0, name.Count() - 3) + ".png")).ToList();
-        paths.Want = Want.Select(name => Path.Combine(basePath, name.Substring(name.Count() - 3, 3), name.Substring(0, name.Count() - 3) + ".png")).ToList();
-        paths.Have = Have.Select(name => Path.Combine(basePath, name.Substring(name.Count() - 3, 3), name.Substring(0, name.Count() - 3) + ".png")).ToList();
+        paths.TopPriority = TopPriority.Select(name => Path.Combine(basePath, name + ".png")).ToList();
+        paths.Want = Want.Select(name => Path.Combine(basePath, name + ".png")).ToList();
+        paths.Have = Have.Select(name => Path.Combine(basePath, name + ".png")).ToList();
         return paths;
     }
 }

@@ -27,6 +27,7 @@ public class MemberController : Controller
     public IActionResult Create()
     {
         var mview = new ModelView();
+        mview.UploadedWL = _model;
         return View(mview);
     }
 
@@ -62,289 +63,54 @@ public class MemberController : Controller
 
         return RedirectToAction("Create");
     }
-
-    public IActionResult MPage_(string valeur)
+    
+    [HttpGet]
+    public IActionResult MPage(string valeur)
     {
-        var model = new ModelView
+        var view = new ModelView();
+        view.member = valeur;
+        var ListPCs = _pcservice.GetAllPCs(valeur);
+        for (int i = 0; i < ListPCs.Count(); i++)
         {
-            member = valeur,
-            ListPCs = _pcservice.GetAllPCs(valeur)
-        };
-
-        return View(model);
-    }
-
-
-    public IActionResult MPage(string value)
-    {
-        ModelView view = new ModelView();
-        view.member = value;
-        view.ListPCs = _pcservice.GetAllPCs(value);
-        foreach (string nom in _model.TopPriority)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == value)
-            {
-                view.UploadedWL.TopPriority.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Want)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == value)
-            {
-                view.UploadedWL.Want.Add(nom);
-            }
-        }
-        foreach (string nom in _model.Have)
-        {
-            if (nom != "" && nom.Substring(nom.Count() - 3, 3) == value)
-            {
-                view.UploadedWL.Have.Add(nom);
-            }
+            view.Questions.Add(new ImageQuestion { Name = valeur + "/" + ListPCs[i].Name, Selection = "I", pc = ListPCs[i] });
         }
         return View(view);
     }
 
-
-
     [HttpPost]
-    public IActionResult recupererValeurs(string member)
+    [ValidateAntiForgeryToken]
+    public IActionResult recupererValeurs(ModelView view)
     {
-        var allnames = listPC.KHJ;
-        foreach (List<string> liste in allnames)
+        if (view?.Questions == null || view.Questions.Count == 0)
         {
-            foreach (string nom in liste)
-            {
-                var value = Request.Form[nom];
-
-                switch (value)
-                {
-                    case "I":
-                        break;
-                    case "H":
-                        _model.Have.Add(nom);
-                        break;
-                    case "W":
-                        _model.Want.Add(nom);
-                        break;
-                    case "P":
-                        _model.TopPriority.Add(nom);
-                        break;
-                }
-            }
+            return BadRequest("Questions vides !");
         }
+
+        if (view.Questions == null)
+            view.Questions = new List<ImageQuestion>();
+
+        string member = view.member;
+
+        // Remplir les listes en fonction de Selection
+        _model.Have.AddRange(view.Questions
+            .Where(q => q.Selection == "H")
+            .Select(q => q.Name)
+            .ToList());
+
+        _model.Want.AddRange(view.Questions
+            .Where(q => q.Selection == "W")
+            .Select(q => q.Name)
+            .ToList());
+
+        _model.TopPriority.AddRange(view.Questions
+            .Where(q => q.Selection == "P")
+            .Select(q => q.Name)
+            .ToList());
 
         return RedirectToAction("Create");
     }
 
-    [HttpPost]
-    public IActionResult recupererValeursPSH()
-    {
-        var allnames = listPC.PSH;
-        foreach (List<string> liste in allnames)
-        {
-            foreach (string nom in liste)
-            {
-                var value = Request.Form[nom];
 
-                switch (value)
-                {
-                    case "I":
-                        break;
-                    case "H":
-                        _model.Have.Add(nom);
-                        break;
-                    case "W":
-                        _model.Want.Add(nom);
-                        break;
-                    case "P":
-                        _model.TopPriority.Add(nom);
-                        break;
-                }
-            }
-        }
-
-        return RedirectToAction("Create");
-    }
-
-    [HttpPost]
-    public IActionResult recupererValeursJYH()
-    {
-        var allnames = listPC.JYH;
-        foreach (List<string> liste in allnames)
-        {
-            foreach (string nom in liste)
-            {
-                var value = Request.Form[nom];
-
-                switch (value)
-                {
-                    case "I":
-                        break;
-                    case "H":
-                        _model.Have.Add(nom);
-                        break;
-                    case "W":
-                        _model.Want.Add(nom);
-                        break;
-                    case "P":
-                        _model.TopPriority.Add(nom);
-                        break;
-                }
-            }
-        }
-
-        return RedirectToAction("Create");
-    }
-
-    [HttpPost]
-    public IActionResult recupererValeursKYS()
-    {
-        var allnames = listPC.KYS;
-        foreach (List<string> liste in allnames)
-        {
-            foreach (string nom in liste)
-            {
-                var value = Request.Form[nom];
-
-                switch (value)
-                {
-                    case "I":
-                        break;
-                    case "H":
-                        _model.Have.Add(nom);
-                        break;
-                    case "W":
-                        _model.Want.Add(nom);
-                        break;
-                    case "P":
-                        _model.TopPriority.Add(nom);
-                        break;
-                }
-            }
-        }
-
-        return RedirectToAction("Create");
-    }
-
-    [HttpPost]
-    public IActionResult recupererValeursCSN()
-    {
-        var allnames = listPC.CSN;
-        foreach (List<string> liste in allnames)
-        {
-            foreach (string nom in liste)
-            {
-                var value = Request.Form[nom];
-
-                switch (value)
-                {
-                    case "I":
-                        break;
-                    case "H":
-                        _model.Have.Add(nom);
-                        break;
-                    case "W":
-                        _model.Want.Add(nom);
-                        break;
-                    case "P":
-                        _model.TopPriority.Add(nom);
-                        break;
-                }
-            }
-        }
-
-        return RedirectToAction("Create");
-    }
-
-    [HttpPost]
-    public IActionResult recupererValeursSMG()
-    {
-        var allnames = listPC.SMG;
-        foreach (List<string> liste in allnames)
-        {
-            foreach (string nom in liste)
-            {
-                var value = Request.Form[nom];
-
-                switch (value)
-                {
-                    case "I":
-                        break;
-                    case "H":
-                        _model.Have.Add(nom);
-                        break;
-                    case "W":
-                        _model.Want.Add(nom);
-                        break;
-                    case "P":
-                        _model.TopPriority.Add(nom);
-                        break;
-                }
-            }
-        }
-
-        return RedirectToAction("Create");
-    }
-
-    [HttpPost]
-    public IActionResult recupererValeursJWY()
-    {
-        var allnames = listPC.JWY;
-        foreach (List<string> liste in allnames)
-        {
-            foreach (string nom in liste)
-            {
-                var value = Request.Form[nom];
-
-                switch (value)
-                {
-                    case "I":
-                        break;
-                    case "H":
-                        _model.Have.Add(nom);
-                        break;
-                    case "W":
-                        _model.Want.Add(nom);
-                        break;
-                    case "P":
-                        _model.TopPriority.Add(nom);
-                        break;
-                }
-            }
-        }
-
-        return RedirectToAction("Create");
-    }
-
-    [HttpPost]
-    public IActionResult recupererValeursCJH()
-    {
-        var allnames = listPC.CJH;
-        foreach (List<string> liste in allnames)
-        {
-            foreach (string nom in liste)
-            {
-                var value = Request.Form[nom];
-
-                switch (value)
-                {
-                    case "I":
-                        break;
-                    case "H":
-                        _model.Have.Add(nom);
-                        break;
-                    case "W":
-                        _model.Want.Add(nom);
-                        break;
-                    case "P":
-                        _model.TopPriority.Add(nom);
-                        break;
-                }
-            }
-        }
-
-        return RedirectToAction("Create");
-    }
 
     [HttpGet]
     public IActionResult Telecharger()

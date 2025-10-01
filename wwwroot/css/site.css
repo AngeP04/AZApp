@@ -39,7 +39,7 @@ body {
 }
 
 .custom-file-upload label {
-    background-color: #007bff;
+    background-color: #000000;
     color: white;
     padding: 10px 20px;
     display: inline-block;
@@ -50,7 +50,7 @@ body {
 }
 
 .custom-file-upload label:hover {
-    background-color: #0056b3;
+    background-color: #000000;
 }
 
 
@@ -243,8 +243,6 @@ body {
     padding: 10px 15px;        /* espace autour du texte */
     border-radius: 8px;        /* coins arrondis */
     display: inline-block;      /* permet de centrer le bloc */
-    text-align: center;         /* centre le contenu */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optionnel : léger effet de profondeur */
-    text-align: center;   
     font-size: 24px;
 }

@@ -1,0 +1,179 @@
+@using Microsoft.AspNetCore.Mvc
+@using Microsoft.AspNetCore.Mvc.Razor
+@model ModelView
+
+@{
+    string member = @Model.member;
+    string temp = member+"-fond";
+    string fond = @Model.Color[temp];
+    temp = member+"-tour";
+    string tour = @Model.Color[temp];
+    temp = member+"-name";
+    string name = @Model.IntroPage[temp];
+    temp = member+"-prg";
+    string prg = @Model.IntroPage[temp];
+}
+
+<style>
+    body {background-color: @fond}
+    .pretty-link:hover {
+        color: @tour;
+    }
+    .album-title {
+        margin-top: 40px;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        width: 100%;
+        background-color: @tour;
+        color: #ffffff;
+    }
+    .cercle {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;          /* empêche l’image de se rétrécir */
+    border: 8px solid @tour;
+    }
+    .btn-personnalise {
+    background-color: @tour;  /* couleur de fond */
+    color: white;               /* couleur du texte */
+    font-size: 24px;            /* taille du texte */
+    padding: 24px 72px;         /* espace à l'intérieur du bouton */
+    border: none;               /* supprime la bordure par défaut */
+    border-radius: 8px;         /* arrondit les coins */
+    cursor: pointer;            /* change le curseur au survol */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* optionnel : ombre */
+    transition: all 0.3s ease;  /* effet de transition pour hover */
+    }
+</style>
+
+
+
+
+<div class="container-fluid">
+    <div class="row align-items-start">
+        <!-- Image sur 2 colonnes -->
+        <div class="col-3">
+            <img src="@Url.Content($"~/Avatar/{Model.member}.png")" class="img-fluid cercle" alt="Photo de profil">
+        </div>
+
+        <!-- Texte sur 10 colonnes -->
+        <div class="col-9">
+            <h2 class="title">@name</h2>
+            <p>@prg</p>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+<!-- Sommaire -->
+<div class="d-flex justify-content-center">
+    <div class="liste-colorée mb-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <ul>
+                    @foreach (var group in Model.Albums.Take(Model.Albums.Count / 2))
+                    {
+                        var safeId = group.Replace(" ", "_");
+                        <li><a href="#@safeId" class="pretty-link">@group</a></li>
+                    }
+                </ul>
+            </div>
+            <div class="col-auto">
+                <ul>
+                    @foreach (var group in Model.Albums.Skip(Model.Albums.Count / 2))
+                    {
+                        var safeId = group.Replace(" ", "_");
+                        <li><a href="#@safeId" class="pretty-link">@group</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<form asp-controller="member" asp-action="recupererValeurs" method="post">
+@Html.AntiForgeryToken()
+
+@* Grouper les images par album, puis par catégorie *@
+@foreach (var albumGroup in Model.ListPCs.GroupBy(i => i.album))
+{
+    <div class="album">
+        @* <div class="album-title">@albumGroup.Key</div> *@
+        <h3 id="@albumGroup.Key.Replace(" ", "_")" class="album-title">@albumGroup.Key</h3>
+    </div>
+
+    <div class="album-grid">
+        @{
+            string? currentKey = null;
+            int indexInGroup = 0;
+        }
+        @foreach (var img in albumGroup.OrderBy(i => i.category).ThenBy(i => i.publisher))
+        {
+            // Définir la clé de regroupement : categorie OU categorie+publisher si c'est "B"
+            string groupKey = img.category == "Merch" || img.category == "POBs" || img.category == "POBs Japonais" ? img.publisher : img.category;
+
+            if (groupKey != currentKey)
+            {
+                currentKey = groupKey;
+                indexInGroup = 0;
+            }
+
+            var color = Model.Color.ContainsKey(groupKey) 
+            ? Model.Color[groupKey] 
+            : "#ccc"; // couleur par défaut si non défini
+
+
+            //string selectedValue = Model.Questions.ContainsKey(img.Name) ? Model.Questions[img.Name] : "I";
+            string selectedValue = "I";
+
+            <div class="image-wrapper">
+                <div class="category-bar" style="background-color:@color">
+                    @(indexInGroup == 0 ? groupKey : "")
+                </div>
+                
+                <div class="image-container">
+                    <img src="@Url.Content($"~/ImagesATEEZ/{member}/{img.Name.Replace(member, "")}" + ".png")" alt="@img.Name"/>
+                    <input type="hidden" name="Questions.index" value="@img.Name" />
+                    <select name="Questions[@Uri.EscapeDataString(img.Name)]">
+                        <option value="I" selected="@(selectedValue == "I" ? "selected" : null)">Indifferent</option>
+                        <option value="H" selected="@(selectedValue == "H" ? "selected" : null)">I have it</option>
+                        <option value="W" selected="@(selectedValue == "W" ? "selected" : null)">I want it</option>
+                        <option value="P" selected="@(selectedValue == "P" ? "selected" : null)">Top priority</option>
+                    </select>
+                </div>
+            </div>
+
+            indexInGroup++;
+        }
+    </div>
+}
+
+
+
+
+
+<br>
+<br>
+  <div class="btn-wrapper">
+        <button type="submit" class="btn-personnalise">Save</button>
+  </div>
+</form>
+
+<footer id="footer">
+    <p>...</p>
+</footer>
+
+
+
+
+<!-- Bouton -->
+<button id="btn1" class="btn-fixe">Save</button>
+<button id="btn2" class="btn-fixe">Top</button>
+

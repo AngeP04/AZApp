@@ -109,7 +109,9 @@
 <div class="btn-wrapper">
   <a asp-controller="member" asp-action="Telecharger" class="btn btn-dark btn-lg btn-block">Download the pdf</legend></a>
 </div>
-@* 
+
+
+
 <h1>Liste des PCs</h1>
 <table>
     <thead>
@@ -120,13 +122,23 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var u in Model)
+        @foreach (var u in Model.UploadedWL.TopPriority)
         {
             <tr>
-                <td>@u.id</td>
-                <td>@u.Name</td>
-                <td>@u.album</td>
+                <td>@u</td>
+            </tr>
+        }
+        @foreach (var u in Model.UploadedWL.Want)
+        {
+            <tr>
+                <td>@u</td>
+            </tr>
+        }
+        @foreach (var u in Model.UploadedWL.Have)
+        {
+            <tr>
+                <td>@u</td>
             </tr>
         }
     </tbody>
-</table> *@
+</table> 

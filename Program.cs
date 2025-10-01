@@ -2,6 +2,7 @@ using AZapp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using QuestPDF.Infrastructure;
+using Microsoft.AspNetCore.Http.Features;
 QuestPDF.Settings.License = LicenseType.Community;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,13 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+builder.Services.Configure<FormOptions>(o =>
+{
+    o.ValueCountLimit = int.MaxValue; // augmente la limite du nombre de valeurs
+    o.MultipartBodyLengthLimit = long.MaxValue; // augmente la taille des fichiers
+    o.BufferBody = true;                         // (optionnel) met en mémoire tampon
+});
+
 
 // Déclaration du context de base de données pour l'injection de dépendances
 builder.Services.AddDbContext<PCbibDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));

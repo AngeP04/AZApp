@@ -152,31 +152,111 @@ public class ListPC
         "NotOkayUniversalVenue1", "NotOkayUniversalVenue2", "NotOkayTarget", "BirthdayJFanclubSolo", "BirthdayJFanclub", "BirthdayTower",
         "BirthdayTowerLuckyDraw", "BirthdayTowerShibuyaLD", "BirthdayUniversal", "BirthdayUniversalLuckyDraw", "BirthdayHMVOfflineLD",
         "BirthdayRakutenLuckyDraw", "BirthdayNeowing", "BirthdayTowerVenue1", "BirthdayTowerVenue2", "BirthdayHMVClear", "BirthdayHMVOnlineLD"];
-        List<string> merch = ["KconJapan", "TreasureCafe", "DelMundoTreasureStamp", "KQshop20ID", "Perrier", "KQshopStar1117Perfume",
+        List<string> merch = ["KconJapan", "TreasureCafe", "DelMundoTreasureStamp", "KQshop20ID", "Perrier", "KQshopStar1117Perfume",   //KYS
         "ZeroFever1MMTNametag", "ZeroFever1PopupLottery", "KQshopLightstick", "KQshopFellowshiptourDVD", "2ndAnniversaryPortofcallT",
         "2ndAnniversaryPortofcall2", "KQshopSG21", "KQshopSG21ID", "KQshopWishbracelet", "Atiny2FankitPolaroid1", "Atiny2FankitPolaroid2",
         "Atiny2FankitPolaroid3", "SubkshopA", "SubkshopDiary", "SubkshopZ", "SubkshopPolaroid1", "SubkshopPolaroid2", "KQshopCromerKeyring",
         "SummerVacCampLotteryClear1", "SummerVacCampLotteryClear2", "SummerVacCampLimited1", "SummerVacCampLimited2", "PepsiTasteofKorea",
         "WonderwallA", "WonderwallB","WonderwallC","KQshopHiddenMap11", "KQshopHiddenMap12", "KQshopHiddenMap13", "KQshopHiddenMap21",
-        "KQshopHiddenMap22", "KQshopHiddenMap23", "KQshopSummerDecoBinder", ""];
+        "KQshopHiddenMap22", "KQshopHiddenMap23", "KQshopSummerDecoBinder", "SubkShopPOB1", "SubkShopPOB2", "SubkShopPC1", "SubkShopPC2",
+        "SubkShopPolaroid11", "SubkShopPolaroid12", "XRconcert", "KQshopSG22", "KQshopBirthdayMD11", "KQshopBirthdayMD12", "FellowshipTourKeyring",
+        "FellowshipTourMMTsoundcheck", "KQshopOdetoyouth", "KQshopOdetoyouthHolo", "Atiny3Fankit", "Atiny3FankitRejoin", "CashbeeTransitCard",
+        "KQshopFellowshipTourDVD2", "Wonderwall1", "Wonderwall2", "Wonderwall3", "WonderwallHolo", "KQshopFeverdeardiary", "Unikon",
+        "FellowshiptourAtinyPass", "FellowshiptourJPNvenue", "FellowshiptourJPNdvd", "Mernel1A", "Mernel1B", "Wordl1SoundwaveClear",
+        "World1EverlinePopupStamp", "KQshopSummerbook1", "KQshopSummerbook2", "Hello82PopupEvent", "Mernel2A", "Mernel2B", "CashbeeTransit",
+        "Mernel3", "Mernel4", "FellowshiptourPhotoset", "FellowshiptourPolaroid1", "FellowshiptourPolaroid2", "FellowshiptourSuperstarPVC",
+        "FellowshiptourSuperstar", "FellowshiptourSuperstarLenti", "FellowshiptourAtinyZone1", "FellowshiptourAtinyZone2", "FellowshiptourSailorpackage",
+        "KQshopBirthdayMD", "Wonderwall1A", "Wonderwall1B", "Wonderwall2A", "Wonderwall2B", "WonderwallHoloUnit", "AtinyroomTrading1", "AtinyroomTrading2",
+        "AtinyroomTrading3", "AtinyroomTrading4","AtinyroomTrading5", "AtinyroomTrading6", "AtinyroomRandomGift", "AtinyroomLD1", "AtinyroomLD2",
+        "KQshopSG231", "KQshopSG232", "OliveyoungMetaPreorder", "CawaiiWhite", "CawaiiBlack", "CawaiiRed", "Mernel5", "MernelJapanLimited",
+        "MernelJapanLimitedUnit", "FellowshiptourDay1Jpnvenue", "FellowshiptourDay2Jpnvenue", "FellowshiptourTradingCase", "FellowshiptourDecoset1",
+        "FellowshiptourDecoset2", "KQshop8M1Sbinder", "KQshop8M1Sphotoset", "KQshop8M1Sspecialsigned", "Kaura", "FellowshiptourPopupHolo",
+        "FellowshiptourEUvenueHolo", "FellowshiptourCushioncover", "FellowshiptourJersey", "WW3", "FellowshiptourPhotoset1", "FellowshiptourPhotoset2",
+        "FellowshiptourPhotosetPolaroid", "KQshopFellowshiptourDVD1", "KQshopFellowshiptourBluray",
+            "KQshopTeezmonPlushie", "PottsA", "PottsB", "FellowshiptourSoundcheck", "FellowshiptourAtinyzone", "FellowshiptourSuperstarPVC1",
+        "FellowshiptourSuperstar1", "FellowshiptourSuperstarLenti1", "PottsC", "PottsUnit", "PottsD", "PottsE", "PottsUnit1", "KconJapan1",
+        "World2Acrylicstand", "World2Binder", "World2EverlinePopupstamp", "KQshopBTWjapantourBluray", "Atiny4Fankit", "Atiny4FankitPolaroid",
+        "WonderwallA1", "WonderwallB1", "KQshopSummerphotobook", "KQshopSummerphotobookPOB1", "KQshopSummerphotobookPOB2", "WonderwallC1",
+        "WonderwallD1", "WonderwallE1", "KconLASuperstar", "KconLAcafe", "KconLAmerchbooth", "KconLAKQ10anni", "KconLAKcollection",
+        "IdolRadioLiveSeoul", "FrommEarlybird1", "FrommEarlybird2","FrommEarlybirdUnit", "SuperstarLondon", "KQshopBTWtourDVDBlurayJPN",
+        "KQshopTowerPOB", "KQshopBirthdayMD1", "KQshopBirthdayMD1Pola1", "KQshopBirthdayMD1Pola2", "WorldFinSoundwaveFortune", "WorldFinFortuneA",
+        "WorldFinFortuneB", "WorldFinFortuneC",
+        "WorldFinTinPolaroid", "WorldFinMitoBottle", "WorldFinMitoPouch", "WorldFinBinder", "WorldFinMitoKeyring", "WorldFinLightstickStrap",
+        "WorldFinWaxPerfume", "KQshopSG24", "KQshopSG241", "KQshopSG24POB", "SuperstarTokyo1", "SuperstarTokyo2", "Kaura1", "Nacific1",
+        "TTLTourFrommSubscriber", "TTLTourPhotoset", "TTLTourPCPack", "TTLTourStrapminipouch", "TTLTourAtinyzone", "TTLTourSoundcheckSailor",
+        "TTLSuperstarMission", "TTLSuperstarPurchaseWhite", "TTLSuperstarPurchaseBlack", "TTLSuperstarPlay", "TTLSaitamaJFanclubLD1",
+        "TTLSaitamaJFanclubLD2", "AniteezSoundwavePopupmission", "AniteezSoundwavePlushie", "AniteezSoundwaveKeychain", "AniteezSoundwaveLightstickcape",
+        "AniteezSoundwaveAcrylicframe", "AniteezSoundwaveLholder", "AniteezSoundwavePicketcover", "AniteezSoundwaveAcrylicmultiholder",
+        "AniteezSoundwaveAdventurelog", "AniteezSoundwavePhotoset", "AniteezSoundwavePhotosetPolaroid1", "AniteezSoundwavePhotosetPolaroid2",
+        "AniteezSoundwaveMinicrossbag", "AniteezSoundwaveTincandle", "AniteezSoundwavePajamas", "AniteezSoundwaveEntryticket", "AniteezSoundwaveTrading1",
+        "AniteezSoundwaveTrading2", "AniteezSoundwaveTrading3", "AniteezSoundwaveTrading4", "AniteezSoundwaveTrading5", "AniteezSoundwaveTradingUnit1",
+        "AniteezSoundwaveTradingUnit2", "AniteezSoundwaveAniteezcard", "AniteezSoundwaveAniteezoutfit", "AniteezSoundwaveMonitordollSleep",
+        "AniteezSoundwaveMonitordollMarine", "AniteezSoundwaveAcrylicframe2", "Nacific3", "Nacific3ID", "PottsA1", "PottsB1", "PottsC1",
+        "H82AtinyzoneLA", "WithmuuThunderA", "Dicon1", "DiconUnit", "Dicon2", "Dicon3", "Dicon4", "Dicon5", "Nacific4", "Atiny5", "Atiny5Redteam",
+        "KQshopTeezmoncafejapan", "PottsD1", "Nacific5", "Nacific5Special", "WithmuuThunderB", "CafeBombom", "GH13", "GH1Soundwavepopup1",
+        "GH1Soundwavepopup2", "GH1ScratchA", "GH1Mitokeyring", "GH1Mitocushion", "GH1Mitoholder", "GH1Workballcap", "GH1Minipouch",
+            "GH1SoundwaveInstax", "GH1gachaID", "GH150000Wbenefit", "WithmuuTaiwanthunder", "MatsukiyoLotteSkinUV", "GH1ScratchZ", "GH1Siliconecharm",
+        "GH1workbracelet", "GH1Tabletmultipouch", "GH1Soudwavepopup2", "GH1Soudwavepopupunit", "GH130000benefit", "Nacific6", "Nacific6ID",
+        "AniteezSoudwavePlushcushion", "AniteezSoudwavePlushmascot", "AniteezSoudwaveMinipouch", "AniteezSoudwavePVCpouchKR", "AniteezSoudwaveMascotmission",
+        "AniteezSoudwavepopupstore", "AniteezSoudwavePlushholder", "AniteezSoudwavePVCplushJP", "AniteezSoudwaveItabag", "AniteezSoudwaveHockeymascot",
+        "AtinyVoyage24Atinyzone", "AtinyVoyage24Binder", "AtinyVoyage24Photoset", "AtinyVoyage24PhotosetPolaroid", "AtinyVoyage24Decoset",
+        "AniteezSoundwavePlushkeyring", "AniteezSoundwaveCollectbook", "Nacific7", "Nacific7Special", "TTLTour50$popup","TTLTour50$venue", "TTLTourTshirtHolo",
+        "TTLTourAtinyzone1", "TTLTourSilverfoil", "TTLTourSilverfoilHolo", "TTLTourAtinyultimateVIP", "TTLTourBaseballjersey", "TTLTourPCPack1",
+        "KQshopSummerphotobook1", "KQshopSummerphotobookPOB", "KQshopSummerphotobookYes24", "KQshopSummerphotobookKTOWN4U", "AtinyVoyage24Tokyo",
+        "AtinyVoyage248000Ybenefit", "AtinyVoyage24TokyovenueJFanclub", "KQshopPlaycode", "Nacific8", "KQshopTeezmonMascotparty", "KQshopTeezmonMascotparty1",
+        "GH11", "GH12", "GH130", "GH1ApplePOB", "GH1EverlinePOB", "GH1ToktoqPOB", "GH1Hello82POB", "GH1MakestarPOB", "GH1MakestarPOBUnit",
+        "GH1MakestarPOB2", "GH1UMSPOB", "SuperstarLondon1", "SuperstarToronto", "GH1EverlineLDExhibit", "Nacific91", "Nacific92", "KQshopBirthdayMD21",
+        "KQshopBirthdayMD22", "GH250000Wbenefit", "GH2photocardholder", "GH2Mitoneckpillow", "GH2Mitofurslippers", "GH2Hairpinset", "GH2Mirrorkeyring",
+        "GH2IOMTnecklace", "GH2IOMTblanket", "GH2IOMTmilkglass", "GH2IOMTcardholder", "GH2SoundwavepopupLD", "GH2Teethcustomroom", "KQshopSG24PC1",
+        "KQshopSG24PC2", "KQshopSG24POB1", "KQshopSG24Yes24", "KQshopSG24KTOWN4U", "Nacific10", "DestinysMemories50000Wbenefit", "DestinysMemoriesTrading1",
+        "DestinysMemoriesTrading2", "DestinysMemoriesTrading3", "DestinysMemoriesTrading4", "DestinysMemoriesPolaroidA", "DestinysMemoriesHoodie",
+        "DestinysMemoriesLaptoppouch", "DestinysMemoriesNPC", "DestinysMemoriesLD", "DestinysMemories2benefit", "Superstar10anniversary1", "Superstar10anniversary2",
+        "Superstar10anniversary3", "H82Eclipsetote", "MBC24GayoDaejonLimited1", "MBC24GayoDaejonLimited2", "DestinysMemories50000Wbenefit1",
+        "DestinysMemoriesAcrylicturningstand", "DestinysMemoriesPolaroidB", "DestinysMemoriesWirekeyring", "DestinysMemoriesTicketbook",
+        "DestinysMemoriesLD2", "HarajukuXyz5000Ybenefit1", "HarajukuXyz5000Ybenefit2", "HarajukuXyzTrading1", "HarajukuXyzTrading2", "HarajukuXyzTrading3",
+        "HarajukuXyzTrading4", "WonderwallA2", "WonderwallB2", "WonderwallC2", "SoundwavePajamaset", "SoundwaveMinibodypillow", "SoundwaveMinifacekeyring",
+        "SoudnwaveGuardianangelplushkeyring", "Soundwave50000Wbenefit", "AtinyVoyage24Trading1", "AtinyVoyage24Trading2", "AtinyVoyage24Trading3",
+        "AtinyVoyage24Trading4",
+            "AtinyVoyageSpecialHolo", "AtinyVoyage8000Ybenefit", "AtinyVoyage8000JFanclub", "AtinyVoyageKobeCDbenefit", "AtinyVoyageCustomholderclear",
+        "TTLTourCroppedhoodiepants", "TTLTourWindbreaker", "TTLTourLongsleevjersey", "TTLTourAtinyzone2", "TTLTour50€venue", "TTLTour50€popup",
+        "GH2MakestarEULD", "GH2MakestarDoublesideUnitLD", "GH2MakestarManchester", "WonderwallD", "WonderwallSpecial", "ZerofeverSeriesKQshopPOB",
+        "ZerofeverSeriesKQshopfigure", "ZerofeverSeriesWithmuuPOB", "ZerofeverSeriesYes24POB", "ZerofeverSeriesKTOWN4UPOB", "ZerofeverSeriesMinirecordPOB",
+        "ZerofeverSeriesMinirecordfigure", "SuperstarPackage", "SuperstarMission", "Crea25SpringMagazine", "TTLTourPCPack2", "TTLTourFrommLive",
+        "TTLTourAtinyzone3", "TTLTourFrommBooth", "TTLTourSailor", "AniteezSoundwaveScoutinguniform", "AniteezSoundwaveTshirt", "AniteezSoundwaveSticon",
+        "AniteezSoundwaveTrading11", "AniteezSoundwaveTrading12", "AniteezSoundwaveTrading13", "AniteezSoundwaveTrading14", "AniteezSoundwaveTrading15",
+        "AniteezSoundwaveTrading16", "AniteezSoundwaveTrading17", "AniteezSoundwaveTrading18", "AniteezSoundwavePhotoPackage", "AniteezSoundwaveStringbag",
+        "AniteezSoundwaveFlatfurplush", "AniteezSoundwaveLightstickstrap", "AniteezSoundwaveMiniplush", "AniteezSoundwave50000Wbenefit",
+        "AniteezSoundwave100000Wbenefit", "AniteezSoundwaveStampevent", "CGVWorldtourmovie", "ThesandboxWave", "ThesandboxGuerilla",
+        "JohnVarvatosPerfume1", "JohnVarvatosPerfume2", "JohnVarvatosPerfume3", "Atiny6Fankit1", "Atiny6Fankit2"];
 
         KHJ.Add(albums.Select(name => name + "KHJ").ToList());
         KHJ.Add(POBs.Select(name => name + "KHJ").ToList());
         KHJ.Add(Jalbums.Select(name => name + "KHJ").ToList());
         KHJ.Add(Jpobs.Select(name => name + "KHJ").ToList());
         KHJ.Add(merch.Select(name => name + "KHJ").ToList());
+        KHJ[4].Remove("JohnVarvatosPerfume1KHJ");
+        KHJ[4].Remove("JohnVarvatosPerfume2KHJ");
+        KHJ[4].Remove("JohnVarvatosPerfume3KHJ"); 
+        KHJ[4].Remove("KQshopBirthdayMD1Pola1KHJ");
+        KHJ[4].Remove("KQshopBirthdayMD1Pola2KHJ");
 
         PSH.Add(albums.Select(name => name + "PSH").ToList());
         PSH.Add(POBs.Select(name => name + "PSH").ToList());
         PSH.Add(Jalbums.Select(name => name + "PSH").ToList());
         PSH.Add(Jpobs.Select(name => name + "PSH").ToList());
         PSH.Add(merch.Select(name => name + "PSH").ToList());
+        PSH[4].Remove("PepsiTasteofKoreaPSH");
+        PSH[4].Remove("KQshopBirthdayMD1Pola1PSH");
+        PSH[4].Remove("KQshopBirthdayMD1Pola1PSH");
 
         JYH.Add(albums.Select(name => name + "JYH").ToList());
         JYH.Add(POBs.Select(name => name + "JYH").ToList());
         JYH.Add(Jalbums.Select(name => name + "JYH").ToList());
         JYH.Add(Jpobs.Select(name => name + "JYH").ToList());
         JYH.Add(merch.Select(name => name + "JYH").ToList());
+        JYH[4].Remove("JohnVarvatosPerfume1JYH");
+        JYH[4].Remove("JohnVarvatosPerfume2JYH");
+        JYH[4].Remove("JohnVarvatosPerfume3JYH"); 
 
         KYS.Add(albums.Select(name => name + "KYS").ToList());
         KYS.Add(POBs.Select(name => name + "KYS").ToList()); 
@@ -203,7 +283,37 @@ public class ListPC
         SMG[0].Remove("ZeroFever2Z2SMG");
         SMG[0].Remove("ZeroFever2ZLimitedSMG");
         SMG.Add(POBs.Select(name => name + "SMG").ToList());
-        SMG[1].Remove("SMG");
+        SMG[1].Remove("ZeroFever2AMmtSMG");
+        SMG[1].Remove("ZeroFever2DiaryMmtSMG");
+        SMG[1].Remove("ZeroFever2ZMmtSMG");
+        SMG[1].Remove("ZeroFever2KTOWN4USMG");
+        SMG[1].Remove("ZeroFever2AppleSMG");
+        SMG[1].Remove("ZeroFever2MakestarSMG");
+        SMG[1].Remove("ZeroFever2MakestarHoloSMG");
+        SMG[1].Remove("ZeroFever2Yes24SMG");
+        SMG[1].Remove("ZeroFever2SynnaraSMG");
+        SMG[1].Remove("ZeroFever2OTKSMG");
+        SMG[1].Remove("ZeroFever2YGlobalHoloSMG");
+        SMG[1].Remove("ZeroFever2JoeunUnit1SMG");
+        SMG[1].Remove("ZeroFever2JoeunUnit2SMG");
+        SMG[1].Remove("ZeroFever2MusicKoreaSMG");
+        SMG[1].Remove("ZeroFever2MusicPlantSMG");
+        SMG[1].Remove("ZeroFever2HotTracksSMG");
+        SMG[1].Remove("ZeroFever2MokketshopSMG");
+        SMG[1].Remove("ZeroFever2Makestar2SMG");
+        SMG[1].Remove("ZeroFever2Makestar2HoloSMG");
+        SMG[1].Remove("ZeroFever2Mmt2SMG");
+        SMG[1].Remove("ZeroFever2MKMediaUnit1SMG");
+        SMG[1].Remove("ZeroFever2MKMediaUnit2SMG");
+        SMG[1].Remove("ZeroFever2MKMediaUnit3SMG");
+        SMG[1].Remove("ZeroFever2MusicArtSMG");
+        SMG[1].Remove("ZeroFever2Beatroad2SMG");
+        SMG[1].Remove("ZeroFever2Makestar3SMG");
+        SMG[1].Remove("ZeroFever2Makestar3HoloSMG");
+        SMG[1].Remove("ZeroFever2Mmt3SMG");
+        SMG[1].Remove("ZeroFever2Yes242SMG");
+        SMG[1].Remove("ZeroFever2MusicArt2SMG");
+        SMG[1].Remove("ZeroFever2RakutenSMG");
         SMG.Add(Jalbums.Select(name => name + "SMG").ToList());
         SMG[2].Remove("IntoAtoZRegularSMG");
         SMG[2].Remove("IntoAtoZLimited1SMG");
@@ -222,12 +332,16 @@ public class ListPC
 
         JWY.Add(albums.Select(name => name + "JWY").ToList());
         JWY.Add(POBs.Select(name => name + "JWY").ToList());
+        JWY[1].Remove("ZeroFever2MKMediaUnit3JWY");
         JWY.Add(Jalbums.Select(name => name + "JWY").ToList());
         JWY.Add(Jpobs.Select(name => name + "JWY").ToList());
         JWY.Add(merch.Select(name => name + "JWY").ToList());
 
         CJH.Add(albums.Select(name => name + "CJH").ToList());
         CJH.Add(POBs.Select(name => name + "CJH").ToList());
+        CJH[1].Remove("ZeroFever2MKMediaUnit3CJH");
+        CJH[1].Remove("World2MiniRecordLD7CJH");
+        CJH[1].Remove("World2MiniRecordLD8CJH");
         CJH.Add(Jalbums.Select(name => name + "CJH").ToList());
         CJH.Add(Jpobs.Select(name => name + "CJH").ToList());
         CJH.Add(merch.Select(name => name + "CJH").ToList());

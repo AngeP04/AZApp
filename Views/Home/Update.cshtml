@@ -1,5 +1,25 @@
-You can here update your wishlist.
 
+<style>
+    body {
+        background-image: url('/ImagesATEEZ/sleepingAniteez.jpg'); /* chemin depuis wwwroot */
+        background-size: cover;       /* couvre toute la page */
+        background-position: center;  /* centrée */
+        background-repeat: no-repeat; /* pas de répétition */
+        background-attachment: fixed; /* l’image reste fixe au scroll */
+    }
+    .pretty-link:hover {
+        color: #007bff;
+    }
+</style>
+
+<div class="btn-wrapper">
+    <div class="text-img">
+        <h2>You can here update your wishlist.</h2>
+   </div>
+</div>
+<br>
+<br>
+<div class="text-img">
 Please put here the .txt file your downloaded last time:
 <form asp-controller="member" asp-action="UploadFile" method="post" enctype="multipart/form-data">
     <div class="mb-3">
@@ -9,10 +29,16 @@ Please put here the .txt file your downloaded last time:
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="btn-wrapper">
+        <button type="submit" class="btn btn-dark btn-lg btn-block">Submit</button>
+    </div>
 </form>
 
 It is probably named WishListData.txt and is in a folder named Wishlist in your downloads folder if you did not move it last time.
+</div>
+
+
+
 
 <script>
     const fileInput = document.getElementById('fileInput');
